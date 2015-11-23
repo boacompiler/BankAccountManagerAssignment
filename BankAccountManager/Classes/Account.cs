@@ -4,17 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Forms;
+
 namespace BankAccountManager.Classes
 {
     class Account
     {
         private int acountNumber;
         private Name CustomerName;
-
-        
-        public Account()
+        private Address customerAddress;
+        private double accountBalance;
+        //TODO getters and setters?
+        public Account(double initialBalance)
         {
-            
+            accountBalance = (initialBalance >= 0) ? initialBalance : 0;
+            //TODO clean this up, and maybe come up with a better solution, but this is directly asked for in the specs
+            MessageBox.Show("initial balance too low");
+        }
+        //TODO add validation
+        public void Deposit(double depositAmount)
+        {
+            accountBalance += depositAmount;
+        }
+
+        public void Withdraw(double withdrawAmount)
+        {
+            if (withdrawAmount <= accountBalance)
+            {
+                accountBalance -= withdrawAmount;
+            }
+            else
+            {
+                MessageBox.Show("Debit amount exceeds account balance");
+            }
+        }
+        //TODO kinda redundant and more of a java structure than something thats used in c#, but this is directly asked for in the specs
+        public double GetBalance()
+        {
+            return accountBalance;
         }
     }
 }

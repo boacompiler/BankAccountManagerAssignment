@@ -11,9 +11,16 @@ namespace BankAccountManager.Classes
     class Account
     {
         private int acountNumber;
-        private Name CustomerName;
+        private Name customerName;
         private Address customerAddress;
         private double accountBalance;
+        
+        public Account(double initialBalance)
+        {
+            accountBalance = (initialBalance >= 0) ? initialBalance : 0;
+            //TODO clean this up, and maybe come up with a better solution, but this is directly asked for in the specs
+            MessageBox.Show("initial balance too low");
+        }
 
         public int AcountNumber
         {
@@ -28,16 +35,16 @@ namespace BankAccountManager.Classes
             }
         }
 
-        internal Name CustomerName1
+        internal Name CustomerName
         {
             get
             {
-                return CustomerName;
+                return customerName;
             }
 
             set
             {
-                CustomerName = value;
+                customerName = value;
             }
         }
 
@@ -67,13 +74,6 @@ namespace BankAccountManager.Classes
             }
         }
 
-        //TODO getters and setters?
-        public Account(double initialBalance)
-        {
-            accountBalance = (initialBalance >= 0) ? initialBalance : 0;
-            //TODO clean this up, and maybe come up with a better solution, but this is directly asked for in the specs
-            MessageBox.Show("initial balance too low");
-        }
         //TODO add validation
         public void Deposit(double depositAmount)
         {

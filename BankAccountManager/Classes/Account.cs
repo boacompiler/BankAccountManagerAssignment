@@ -60,7 +60,7 @@ namespace BankAccountManager.Classes
                 customerAddress = value;
             }
         }
-        //TODO check redundancy with the getbalance method, although this also sets
+        //TODO this is sorta redundant due to specifications but much better than specifications...
         public double AccountBalance
         {
             get
@@ -91,7 +91,7 @@ namespace BankAccountManager.Classes
                 MessageBox.Show("Debit amount exceeds account balance");
             }
         }
-        //TODO kinda redundant and more of a java structure than something thats used in c#, but this is directly asked for in the specs
+        //TODO kinda redundant and more of a java structure than something thats used in c#, but this is directly asked for in the specs (because specs are for c++ cough cough)
         public double GetBalance()
         {
             return accountBalance;

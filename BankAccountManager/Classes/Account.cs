@@ -8,8 +8,9 @@ namespace BankAccountManager.Classes
 {
     class Account
     {
-        private int AcountNumber;
-        
+        private int acountNumber;
+        private Name CustomerName;
+
         
         public Account()
         {

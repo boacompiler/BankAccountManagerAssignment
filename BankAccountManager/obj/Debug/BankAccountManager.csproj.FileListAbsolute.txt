@@ -1,1 +1,8 @@
 c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\bin\Debug\BankAccountManager.exe.config
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\bin\Debug\BankAccountManager.exe
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\bin\Debug\BankAccountManager.pdb
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.csprojResolveAssemblyReference.cache
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.Properties.Resources.resources
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.csproj.GenerateResource.Cache
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.exe
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.pdb

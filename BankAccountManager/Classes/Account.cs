@@ -14,6 +14,59 @@ namespace BankAccountManager.Classes
         private Name CustomerName;
         private Address customerAddress;
         private double accountBalance;
+
+        public int AcountNumber
+        {
+            get
+            {
+                return acountNumber;
+            }
+
+            set
+            {
+                acountNumber = value;
+            }
+        }
+
+        internal Name CustomerName1
+        {
+            get
+            {
+                return CustomerName;
+            }
+
+            set
+            {
+                CustomerName = value;
+            }
+        }
+
+        internal Address CustomerAddress
+        {
+            get
+            {
+                return customerAddress;
+            }
+
+            set
+            {
+                customerAddress = value;
+            }
+        }
+        //TODO check redundancy with the getbalance method, although this also sets
+        public double AccountBalance
+        {
+            get
+            {
+                return accountBalance;
+            }
+
+            set
+            {
+                accountBalance = value;
+            }
+        }
+
         //TODO getters and setters?
         public Account(double initialBalance)
         {

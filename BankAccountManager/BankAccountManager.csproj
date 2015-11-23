@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\Address.cs" />
+    <Compile Include="Classes\CurrentAccount.cs" />
+    <Compile Include="Classes\FixedTermAccount.cs" />
+    <Compile Include="Classes\Name.cs" />
+    <Compile Include="Classes\SavingsAccount.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

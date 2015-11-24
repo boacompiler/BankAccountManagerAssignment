@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Windows.Forms;
 
-namespace ControlChangeClass.Classes
+namespace BankAccountManager
 {
     class UserControlManager
     {

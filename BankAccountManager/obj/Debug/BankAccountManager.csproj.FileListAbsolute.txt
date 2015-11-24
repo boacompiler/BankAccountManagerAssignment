@@ -6,3 +6,4 @@ c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAcc
 c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.csproj.GenerateResource.Cache
 c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.exe
 c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.pdb
+c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.TestControl.resources

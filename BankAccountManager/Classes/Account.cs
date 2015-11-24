@@ -11,9 +11,19 @@ namespace BankAccountManager.Classes
         
         public Account(double initialBalance)
         {
-            accountBalance = (initialBalance >= 0) ? initialBalance : 0;
+            if (initialBalance < 0)
+            {
+                MessageBox.Show("initial balance too low");
+                accountBalance = 0;
+            }
+            else
+            {
+                accountBalance = initialBalance;
+            }
+            //accountBalance = (initialBalance >= 0) ? initialBalance : 0;
             //TODO clean this up, and maybe come up with a better solution, but this is directly asked for in the specs
-            MessageBox.Show("initial balance too low");
+            
+
         }
 
         public int AcountNumber

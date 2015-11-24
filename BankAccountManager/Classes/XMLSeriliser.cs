@@ -3,7 +3,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace BankAccountManager.XmlSerialiser
+namespace BankAccountManager.Classes
 {
     class XMLSeriliser<T>
     {
@@ -38,9 +38,11 @@ namespace BankAccountManager.XmlSerialiser
         //TODO i used the uk speling of serilise which does not mesh with the constant american spellings found in the libraries, i may have to change this
         public XMLSeriliser(T serialisedClass)
         {
-            SerializerObj = new XmlSerializer(typeof(T));
+            //SerializerObj = new XmlSerializer(typeof(T));
+            SerializerObj = new XmlSerializer(serialisedClass.GetType());
             this.serialisedClass = serialisedClass;
             this.path = Environment.CurrentDirectory + @"\" + serialisedClass.GetType().Name + ".xml";
+            //this.path = Environment.CurrentDirectory + @"\test.xml";
         }
 
         public void Serialise()

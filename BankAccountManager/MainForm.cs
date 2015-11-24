@@ -9,19 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using BankAccountManager.Classes;
-
-
-
-
+using BankAccountManager.UserControls;
 
 
 namespace BankAccountManager
 {
     public partial class MainForm : Form
     {
+        TestControl testControl;
+
+        UserControlManager ucm;
+
         public MainForm()
         {
             InitializeComponent();
+            testControl = new TestControl();
+            ucm = new UserControlManager(this);
+
+            ucm.DisplayControl(testControl);
         }
     }
 }

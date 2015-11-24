@@ -8,7 +8,8 @@ namespace BankAccountManager.Classes
         private Name customerName;
         private Address customerAddress;
         private double accountBalance;
-        
+        private double initialBalance;
+
         public Account(double initialBalance)
         {
             if (initialBalance < 0)
@@ -25,6 +26,7 @@ namespace BankAccountManager.Classes
             
 
         }
+        
 
         public int AcountNumber
         {

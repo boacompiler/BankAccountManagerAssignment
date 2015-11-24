@@ -2,7 +2,7 @@
 
 namespace BankAccountManager.Classes
 {
-    class Account
+    public class Account
     {
         private int acountNumber;
         private Name customerName;
@@ -10,7 +10,7 @@ namespace BankAccountManager.Classes
         private double accountBalance;
         private double initialBalance;
 
-        public Account(double initialBalance)
+        public void SetInitialBalance(double initialBalance)
         {
             if (initialBalance < 0)
             {
@@ -27,6 +27,10 @@ namespace BankAccountManager.Classes
 
         }
         
+        public Account()
+        {
+
+        }
 
         public int AcountNumber
         {

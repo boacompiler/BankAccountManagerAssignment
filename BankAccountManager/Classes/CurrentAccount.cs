@@ -1,14 +1,15 @@
 ﻿namespace BankAccountManager.Classes
 {
-    class CurrentAccount : Account
+    public class CurrentAccount : Account
     {
         private double overdraftLimit;
         private double overdraftPenalty;
 
-        public CurrentAccount(double initialBalance, double initialOverdraftLimit) : base(initialBalance)
+        public void SetInitialBalance(double initialBalance, double initialOverdraftLimit)
         {
             overdraftLimit = initialOverdraftLimit;
             overdraftPenalty = 5;
+            base.SetInitialBalance(initialBalance);
         }
 
         public double OverdraftLimit

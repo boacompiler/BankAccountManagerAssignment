@@ -1,12 +1,18 @@
 ﻿namespace BankAccountManager.Classes
 {
-    class SavingsAccount : Account
+    public class SavingsAccount : Account
     {
         private double interestRate;
 
-        public SavingsAccount (double initialBalance, double initialInterestRate) : base(initialBalance)
+        public SavingsAccount()
+        {
+
+        }
+
+        public void SetInitialBalance(double initialBalance, double initialInterestRate)
         {
             interestRate = initialInterestRate;
+            base.SetInitialBalance(initialBalance);
         }
         
         public double InterestRate

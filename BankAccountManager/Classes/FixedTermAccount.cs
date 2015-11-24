@@ -1,12 +1,13 @@
 ﻿namespace BankAccountManager.Classes
 {
-    class FixedTermAccount : Account
+    public class FixedTermAccount : Account
     {
         double transactionFee;
 
-        public FixedTermAccount(double initialBalance, double initialTransactionFee) : base(initialBalance)
+        public void SetInitialBalance(double initialBalance, double initialTransactionFee) 
         {
             transactionFee = initialTransactionFee;
+            base.SetInitialBalance(initialBalance);
         }
 
         public double TransactionFee

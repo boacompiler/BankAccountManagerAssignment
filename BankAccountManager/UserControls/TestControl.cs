@@ -14,25 +14,17 @@ namespace BankAccountManager.UserControls
     public partial class TestControl : UserControl
     {
         SavingsAccount myAcc;
-        //AccountList myList;
-        List<Name> myList;
-        XMLSeriliser<List<Name>> myXML;
+        List<SavingsAccount> myList;
+        XMLSeriliser<List<SavingsAccount>> myXML;
 
         public TestControl()
         {
             InitializeComponent();
-            myAcc = new SavingsAccount(50, 0.4);
-            //myAcc.CustomerName = new Name("Roy", "Derby", Honorific.None);
-            label2.Text = "" + myAcc.AccountBalance;
-
-            //myList = new AccountList();
-            //myList.Accounts.Add(myAcc);
-            myList = new List<Name>();
-            Name myName = new Name();
-            myName.SetFullName("Louis","Poop",Honorific.Master);
-            myList.Add(myName);
-            myXML = new XMLSeriliser<List<Name>>(myList);
-            //myXML = new XMLSeriliser<AccountList>(myList);
+            myAcc = new SavingsAccount();
+            myAcc.SetInitialBalance(100,0.2);
+            myList = new List<SavingsAccount>();
+            myList.Add(myAcc);
+            myXML = new XMLSeriliser<List<SavingsAccount>>(myList);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +40,7 @@ namespace BankAccountManager.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label1.Text = myList[0].GetFullName();
+            label1.Text = myList[0].AccountBalance + "";
         }
     }
 }

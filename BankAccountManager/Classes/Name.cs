@@ -1,6 +1,6 @@
 ﻿namespace BankAccountManager.Classes
 {
-    enum Honorific
+    public enum Honorific
     {
         None,
         Mr,
@@ -10,12 +10,12 @@
         Mrs
     }
 
-    class Name
+    public class Name
     {
         private string firstName;
         private string secondName;
-
-        private Honorific honorific;
+        //made public for serialisation compatibility
+        public Honorific honorific;
 
         public string FirstName
         {
@@ -56,8 +56,8 @@
             }
         }
 
-
-        public Name(string firstName, string secondName, Honorific honorific)
+        //Removed constructor for serialistation compatibility
+        public void SetFullName(string firstName, string secondName, Honorific honorific)
         {
             this.firstName = firstName;
             this.secondName = secondName;

@@ -52,11 +52,12 @@ namespace BankAccountManager.Classes
             WriteFileStream.Close();
         }
 
-        public void Deserialise(T serialisedClass)
+        public T Deserialise(T serialisedClass)
         {
             FileStream ReadFileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
             serialisedClass = (T)SerializerObj.Deserialize(ReadFileStream);
             ReadFileStream.Close();
+            return serialisedClass;
         }
 
     }

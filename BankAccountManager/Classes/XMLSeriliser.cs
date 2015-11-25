@@ -1,13 +1,14 @@
 ﻿using System;
-
 using System.IO;
 using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
+    //[XmlInclude(typeof(List<SavingsAccount>))]
+    //[XmlInclude(typeof(SavingsAccount))]
     class XMLSeriliser<T>
     {
-
+        
         private string path;
         private XmlSerializer SerializerObj;
         private T serialisedClass;
@@ -40,9 +41,11 @@ namespace BankAccountManager.Classes
         {
             //SerializerObj = new XmlSerializer(typeof(T));
             SerializerObj = new XmlSerializer(serialisedClass.GetType());
+            
             this.serialisedClass = serialisedClass;
             this.path = Environment.CurrentDirectory + @"\" + serialisedClass.GetType().Name + ".xml";
             //this.path = Environment.CurrentDirectory + @"\test.xml";
+            
         }
 
         public void Serialise()

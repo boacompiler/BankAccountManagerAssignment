@@ -29,7 +29,7 @@ namespace BankAccountManager.Classes
         
         public Account()
         {
-
+            //serialisation requires parameterless constructors, so all constructor code has been moved to "SetInitialBalance", this requires an extra line of code for initialisation butprovides a much more robust data management system
         }
 
         public int AcountNumber

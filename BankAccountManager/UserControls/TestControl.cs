@@ -11,6 +11,7 @@ using BankAccountManager.Classes;
 
 namespace BankAccountManager.UserControls
 {
+    
     public partial class TestControl : UserControl
     {
         SavingsAccount myAcc;
@@ -41,6 +42,11 @@ namespace BankAccountManager.UserControls
         private void button3_Click(object sender, EventArgs e)
         {
             label1.Text = myList[0].AccountBalance + "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,7 +2,7 @@
 <ArrayOfSavingsAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SavingsAccount>
     <AcountNumber>0</AcountNumber>
-    <AccountBalance>25</AccountBalance>
+    <AccountBalance>2.50</AccountBalance>
     <InterestRate>0.2</InterestRate>
   </SavingsAccount>
 </ArrayOfSavingsAccount>

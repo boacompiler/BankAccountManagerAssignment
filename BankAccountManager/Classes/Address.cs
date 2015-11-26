@@ -1,6 +1,6 @@
 ﻿namespace BankAccountManager.Classes
 {
-    class Address
+    public class Address
     {
         private string building;
         private string road;
@@ -74,7 +74,7 @@
         }
 
         //TODO add validation
-        public Address(string building, string road, string town, string county, string postalCode)
+        public void SetFullAddress(string building, string road, string town, string county, string postalCode)
         {
             this.building = building;
             this.road = road;

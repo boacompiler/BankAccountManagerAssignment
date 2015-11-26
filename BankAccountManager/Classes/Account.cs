@@ -6,11 +6,13 @@ namespace BankAccountManager.Classes
     [XmlInclude(typeof(SavingsAccount))]
     [XmlInclude(typeof(CurrentAccount))]
     [XmlInclude(typeof(FixedTermAccount))]
+    [XmlInclude(typeof(Name))]
+    [XmlInclude(typeof(Address))]
     public class Account
     {
         private int acountNumber;
-        private Name customerName;
-        private Address customerAddress;
+        public Name customerName;
+        public Address customerAddress;
         private double accountBalance;
         //private double initialBalance;
 

@@ -26,7 +26,13 @@ namespace BankAccountManager.UserControls
             myAcc.SetInitialBalance(100,0.2);
             myCAcc = new CurrentAccount();
             myCAcc.SetInitialBalance(500,100);
-            myCAcc.CustomerName = new Name();
+            Name n = new Name();
+            n.SetFullName("Rob","Paulson",Honorific.Mr);
+            myCAcc.CustomerName = n;
+            myAcc.AcountNumber = 232;
+            Address ad = new Address();
+            ad.SetFullAddress("b1", "r1", "t1", "c1", "G1");
+            myAcc.CustomerAddress = ad;
             myList = new List<Account>();
             myList.Add(myAcc);
             myList.Add(myCAcc);

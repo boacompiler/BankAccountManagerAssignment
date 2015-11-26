@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Account xsi:type="SavingsAccount">
-    <AcountNumber>0</AcountNumber>
+    <customerAddress>
+      <Building>b1</Building>
+      <Road>r1</Road>
+      <Town>t1</Town>
+      <County>c1</County>
+      <PostalCode>G1</PostalCode>
+    </customerAddress>
+    <AcountNumber>232</AcountNumber>
     <AccountBalance>100</AccountBalance>
     <InterestRate>0.2</InterestRate>
   </Account>
   <Account xsi:type="CurrentAccount">
+    <customerName>
+      <honorific>Mr</honorific>
+      <FirstName>Rob</FirstName>
+      <SecondName>Paulson</SecondName>
+    </customerName>
     <AcountNumber>0</AcountNumber>
     <AccountBalance>500</AccountBalance>
     <OverdraftLimit>100</OverdraftLimit>

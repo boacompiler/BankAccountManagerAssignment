@@ -1,14 +1,18 @@
 ﻿using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
+    [XmlInclude(typeof(SavingsAccount))]
+    [XmlInclude(typeof(CurrentAccount))]
+    [XmlInclude(typeof(FixedTermAccount))]
     public class Account
     {
         private int acountNumber;
         private Name customerName;
         private Address customerAddress;
         private double accountBalance;
-        private double initialBalance;
+        //private double initialBalance;
 
         public void SetInitialBalance(double initialBalance)
         {

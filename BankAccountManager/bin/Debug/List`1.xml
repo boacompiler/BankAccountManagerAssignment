@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfSavingsAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SavingsAccount>
+<ArrayOfAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Account xsi:type="SavingsAccount">
     <AcountNumber>0</AcountNumber>
-    <AccountBalance>2.50</AccountBalance>
+    <AccountBalance>100</AccountBalance>
     <InterestRate>0.2</InterestRate>
-  </SavingsAccount>
-</ArrayOfSavingsAccount>
+  </Account>
+  <Account xsi:type="CurrentAccount">
+    <AcountNumber>0</AcountNumber>
+    <AccountBalance>500</AccountBalance>
+    <OverdraftLimit>100</OverdraftLimit>
+    <OverdraftPenalty>5</OverdraftPenalty>
+  </Account>
+</ArrayOfAccount>

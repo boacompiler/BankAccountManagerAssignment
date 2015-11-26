@@ -15,17 +15,22 @@ namespace BankAccountManager.UserControls
     public partial class TestControl : UserControl
     {
         SavingsAccount myAcc;
-        List<SavingsAccount> myList;
-        XMLSeriliser<List<SavingsAccount>> myXML;
+        CurrentAccount myCAcc;
+        List<Account> myList;
+        XMLSeriliser<List<Account>> myXML;
 
         public TestControl()
         {
             InitializeComponent();
             myAcc = new SavingsAccount();
             myAcc.SetInitialBalance(100,0.2);
-            myList = new List<SavingsAccount>();
+            myCAcc = new CurrentAccount();
+            myCAcc.SetInitialBalance(500,100);
+            myCAcc.CustomerName = new Name();
+            myList = new List<Account>();
             myList.Add(myAcc);
-            myXML = new XMLSeriliser<List<SavingsAccount>>(myList);
+            myList.Add(myCAcc);
+            myXML = new XMLSeriliser<List<Account>>(myList);
         }
 
         private void button1_Click(object sender, EventArgs e)

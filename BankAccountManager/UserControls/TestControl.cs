@@ -20,9 +20,13 @@ namespace BankAccountManager.UserControls
         List<Account> myList;
         XMLSeriliser<List<Account>> myXML;
 
+        
+
         public TestControl()
         {
             InitializeComponent();
+
+            
 
             myAcc = new SavingsAccount();
             myAcc.SetInitialBalance(100,0.2);

@@ -16,16 +16,20 @@ namespace BankAccountManager.UserControls
     {
         SavingsAccount myAcc;
         CurrentAccount myCAcc;
+        Account myTestAcc;
         List<Account> myList;
         XMLSeriliser<List<Account>> myXML;
 
         public TestControl()
         {
             InitializeComponent();
+
             myAcc = new SavingsAccount();
             myAcc.SetInitialBalance(100,0.2);
             myCAcc = new CurrentAccount();
             myCAcc.SetInitialBalance(500,100);
+            myTestAcc = new Account();
+            myTestAcc.SetInitialBalance(100);
             Name n = new Name();
             n.SetFullName("Rob","Paulson",Honorific.Mr);
             myCAcc.CustomerName = n;
@@ -36,6 +40,7 @@ namespace BankAccountManager.UserControls
             myList = new List<Account>();
             myList.Add(myAcc);
             myList.Add(myCAcc);
+            myList.Add(myTestAcc);
             myXML = new XMLSeriliser<List<Account>>(myList);
         }
 
@@ -52,7 +57,7 @@ namespace BankAccountManager.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label1.Text = myList[0].AccountBalance + "";
+            label1.Text = myList[(int)numericUpDownGet.Value].AccountBalance + "";
         }
 
         private void button4_Click(object sender, EventArgs e)

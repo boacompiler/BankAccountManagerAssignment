@@ -23,4 +23,8 @@
     <OverdraftLimit>100</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
   </Account>
+  <Account>
+    <AcountNumber>0</AcountNumber>
+    <AccountBalance>100</AccountBalance>
+  </Account>
 </ArrayOfAccount>

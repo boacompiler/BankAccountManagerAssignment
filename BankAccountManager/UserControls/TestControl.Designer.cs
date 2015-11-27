@@ -37,8 +37,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownGet = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,10 +122,18 @@
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 8;
             // 
+            // numericUpDownGet
+            // 
+            this.numericUpDownGet.Location = new System.Drawing.Point(16, 206);
+            this.numericUpDownGet.Name = "numericUpDownGet";
+            this.numericUpDownGet.Size = new System.Drawing.Size(75, 20);
+            this.numericUpDownGet.TabIndex = 10;
+            // 
             // TestControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.numericUpDownGet);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button4);
@@ -137,6 +147,7 @@
             this.Size = new System.Drawing.Size(283, 267);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +164,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDownGet;
     }
 }

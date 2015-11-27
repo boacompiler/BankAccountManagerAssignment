@@ -35,8 +35,14 @@ namespace BankAccountManager.UserControls
             myTestAcc = new Account();
             myTestAcc.SetInitialBalance(100);
             Name n = new Name();
+            Name n1 = new Name();
+            Name n2 = new Name();
             n.SetFullName("Rob","Paulson",Honorific.Mr);
             myCAcc.CustomerName = n;
+            n1.SetFullName("bob", "coolson", Honorific.Master);
+            myAcc.CustomerName = n1;
+            n2.SetFullName("dave", "smellyson", Honorific.Miss);
+            myTestAcc.CustomerName = n2;
             myAcc.AcountNumber = 232;
             Address ad = new Address();
             ad.SetFullAddress("b1", "r1", "t1", "c1", "G1");
@@ -61,7 +67,9 @@ namespace BankAccountManager.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label1.Text = myList[(int)numericUpDownGet.Value].AccountBalance + "";
+            //label1.Text = myList[(int)numericUpDownGet.Value].AccountBalance + "";
+            List<string> nameList = myList.Select(C => C.CustomerName.FirstName).ToList();
+            MessageBox.Show(string.Join(", ", nameList.ToArray()));
         }
 
         private void button4_Click(object sender, EventArgs e)

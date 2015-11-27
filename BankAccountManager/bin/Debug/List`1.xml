@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Account xsi:type="SavingsAccount">
+    <customerName>
+      <honorific>Master</honorific>
+      <FirstName>FUNTUCKER</FirstName>
+      <SecondName>coolson</SecondName>
+    </customerName>
     <customerAddress>
       <Building>b1</Building>
       <Road>r1</Road>

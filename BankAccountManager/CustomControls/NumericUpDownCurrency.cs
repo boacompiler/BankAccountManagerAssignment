@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.Drawing;
 
+
 namespace BankAccountManager.CustomControls
 {
     public partial class NumericUpDownCurrency : NumericUpDown

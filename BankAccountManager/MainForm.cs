@@ -17,16 +17,17 @@ namespace BankAccountManager
     public partial class MainForm : Form
     {
         TestControl testControl;
-
+        UserControlSearch searchControl;
         UserControlManager ucm;
 
         public MainForm()
         {
             InitializeComponent();
             testControl = new TestControl();
+            searchControl = new UserControlSearch();
             ucm = new UserControlManager(this);
 
-            ucm.DisplayControl(testControl);
+            ucm.DisplayControl(searchControl);
         }
     }
 }

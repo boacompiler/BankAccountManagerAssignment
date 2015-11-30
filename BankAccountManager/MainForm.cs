@@ -27,7 +27,7 @@ namespace BankAccountManager
             searchControl = new UserControlSearch();
             ucm = new UserControlManager(this);
 
-            ucm.DisplayControl(searchControl);
+            ucm.DisplayControl(testControl);
         }
     }
 }

@@ -8,3 +8,16 @@ c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAcc
 c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.pdb
 c:\users\robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.TestControl.resources
 C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlSearch.resources
+D:\repositories\bank account\BankAccountManager\bin\Debug\BankAccountManager.exe.config
+D:\repositories\bank account\BankAccountManager\bin\Debug\BankAccountManager.exe
+D:\repositories\bank account\BankAccountManager\bin\Debug\BankAccountManager.pdb
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.csprojResolveAssemblyReference.cache
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.Properties.Resources.resources
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.UserControls.TestControl.resources
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlSearch.resources
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.csproj.GenerateResource.Cache
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.exe
+D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.pdb
+F:\repositories\bank account\BankAccountManager\bin\Debug\BankAccountManager.exe.config
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.exe
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.pdb

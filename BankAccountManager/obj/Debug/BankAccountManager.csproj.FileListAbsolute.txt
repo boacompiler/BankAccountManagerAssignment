@@ -21,3 +21,8 @@ D:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.pdb
 F:\repositories\bank account\BankAccountManager\bin\Debug\BankAccountManager.exe.config
 F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.exe
 F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.pdb
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.csprojResolveAssemblyReference.cache
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.Properties.Resources.resources
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.UserControls.TestControl.resources
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlSearch.resources
+F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.csproj.GenerateResource.Cache

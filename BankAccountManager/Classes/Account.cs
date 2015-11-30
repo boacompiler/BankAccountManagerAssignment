@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿//using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
@@ -20,8 +20,10 @@ namespace BankAccountManager.Classes
         {
             if (initialBalance < 0)
             {
-                MessageBox.Show("initial balance too low");
+                //MessageBox.Show("initial balance too low");
                 accountBalance = 0;
+                throw new System.ArgumentException("Initial balance too low");
+                //TODO is this a good time to throw exception, i don't think so?
             }
             else
             {
@@ -104,7 +106,8 @@ namespace BankAccountManager.Classes
             }
             else
             {
-                MessageBox.Show("Debit amount exceeds account balance");
+                //MessageBox.Show("Debit amount exceeds account balance");
+                throw new System.ArgumentException("Debit amount exceeds account balance");
             }
         }
         //TODO kinda redundant and more of a java structure than something thats used in c#, but this is directly asked for in the specs (because specs are for c++ cough cough)

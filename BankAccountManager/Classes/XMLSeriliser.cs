@@ -4,8 +4,6 @@ using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
-    //[XmlInclude(typeof(List<SavingsAccount>))]
-    //[XmlInclude(typeof(SavingsAccount))]
     class XMLSeriliser<T>
     {
         

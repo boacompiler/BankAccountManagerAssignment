@@ -6,7 +6,7 @@
 
         public SavingsAccount()
         {
-
+            this.Type = "Savings Account";
         }
 
         public void SetInitialBalance(double initialBalance, double initialInterestRate)

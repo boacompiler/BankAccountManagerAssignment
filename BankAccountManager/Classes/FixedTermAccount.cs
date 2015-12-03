@@ -4,6 +4,11 @@
     {
         double transactionFee;
 
+        public FixedTermAccount()
+        {
+            this.Type = "Fixed Term Account";
+        }
+
         public void SetInitialBalance(double initialBalance, double initialTransactionFee) 
         {
             transactionFee = initialTransactionFee;

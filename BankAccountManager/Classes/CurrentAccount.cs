@@ -5,6 +5,11 @@
         private double overdraftLimit;
         private double overdraftPenalty;
 
+        public CurrentAccount()
+        {
+            this.Type = "Current Account";
+        }
+
         public void SetInitialBalance(double initialBalance, double initialOverdraftLimit)
         {
             overdraftLimit = initialOverdraftLimit;

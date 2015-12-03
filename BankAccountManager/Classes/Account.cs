@@ -14,7 +14,14 @@ namespace BankAccountManager.Classes
         public Name customerName;
         public Address customerAddress;
         private double accountBalance;
-        //private double initialBalance;
+        private string type;
+        
+
+        public Account()
+        {
+            //serialisation requires parameterless constructors, so all constructor code has been moved to "SetInitialBalance", this requires an extra line of code for initialisation butprovides a much more robust data management system
+            type = "Account";
+        }
 
         public void SetInitialBalance(double initialBalance)
         {
@@ -33,11 +40,6 @@ namespace BankAccountManager.Classes
             //TODO clean this up, and maybe come up with a better solution, but this is directly asked for in the specs
             
 
-        }
-        
-        public Account()
-        {
-            //serialisation requires parameterless constructors, so all constructor code has been moved to "SetInitialBalance", this requires an extra line of code for initialisation butprovides a much more robust data management system
         }
 
         public int AcountNumber
@@ -89,6 +91,19 @@ namespace BankAccountManager.Classes
             set
             {
                 accountBalance = value;
+            }
+        }
+
+        public string Type
+        {
+            get
+            {
+                return type;
+            }
+
+            set
+            {
+                type = value;
             }
         }
 

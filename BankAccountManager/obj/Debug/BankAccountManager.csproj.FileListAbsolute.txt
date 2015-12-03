@@ -26,3 +26,4 @@ F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.Pro
 F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.UserControls.TestControl.resources
 F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlSearch.resources
 F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.csproj.GenerateResource.Cache
+C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlMenu.resources

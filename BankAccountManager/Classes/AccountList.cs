@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankAccountManager.Classes
 {
+    //TODO remove this class
     public class AccountList
     {
         private List<SavingsAccount> accounts;

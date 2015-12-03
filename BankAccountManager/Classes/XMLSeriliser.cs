@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
-    class XMLSeriliser<T>
+    public class XMLSeriliser<T>
     {
         
         private string path;

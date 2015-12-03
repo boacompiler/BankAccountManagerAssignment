@@ -3,7 +3,7 @@
   <Account xsi:type="SavingsAccount">
     <customerName>
       <honorific>Master</honorific>
-      <FirstName>FUNTUCKER</FirstName>
+      <FirstName>bob</FirstName>
       <SecondName>coolson</SecondName>
     </customerName>
     <customerAddress>
@@ -29,6 +29,11 @@
     <OverdraftPenalty>5</OverdraftPenalty>
   </Account>
   <Account>
+    <customerName>
+      <honorific>None</honorific>
+      <FirstName>dave</FirstName>
+      <SecondName>smellyson</SecondName>
+    </customerName>
     <AcountNumber>0</AcountNumber>
     <AccountBalance>100</AccountBalance>
   </Account>

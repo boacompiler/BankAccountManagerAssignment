@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="UserControls\UserControlManager.cs" />
     <Compile Include="Classes\XMLSeriliser.cs" />
+    <Compile Include="UserControls\UserControlMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlMenu.Designer.cs">
+      <DependentUpon>UserControlMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\TestControl.resx">
       <DependentUpon>TestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlMenu.resx">
+      <DependentUpon>UserControlMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSearch.resx">
       <DependentUpon>UserControlSearch.cs</DependentUpon>

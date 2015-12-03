@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace BankAccountManager
 {
-    class UserControlManager
+    public class UserControlManager
     {
 
         private Form myForm;

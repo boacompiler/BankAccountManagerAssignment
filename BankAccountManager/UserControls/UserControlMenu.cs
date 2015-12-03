@@ -22,6 +22,7 @@ namespace BankAccountManager.UserControls
 
         void FillView()
         {
+            listView1.Items.Clear();
             foreach (Account account in MainForm.myList)
             {
                 ListViewItem item = new ListViewItem(new string[] { account.customerName.GetFullName(), account.Type, "SubItem3", "And so on" });

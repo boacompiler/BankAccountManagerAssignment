@@ -48,7 +48,7 @@ namespace BankAccountManager.Classes
 
         public void Serialise()
         {
-            TextWriter WriteFileStream = new StreamWriter(path);
+            TextWriter WriteFileStream = new StreamWriter(path);           
             SerializerObj.Serialize(WriteFileStream, serialisedClass);
             WriteFileStream.Close();
         }

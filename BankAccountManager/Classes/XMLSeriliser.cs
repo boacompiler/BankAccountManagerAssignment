@@ -12,7 +12,7 @@ namespace BankAccountManager.Classes
         
         private string path;
         private XmlSerializer serializerObj;
-        private T serialisedClass;
+        private T serialisedClass; //this class must comply to serialiser specifications, but can be any type
 
         public string Path
         {
@@ -40,13 +40,14 @@ namespace BankAccountManager.Classes
         //TODO i used the uk speling of serilise which does not mesh with the constant american spellings found in the libraries, i may have to change this
         public XMLSeriliser(T serialisedClass)
         {
-            SerializerObj = new XmlSerializer(serialisedClass.GetType());
+            serializerObj = new XmlSerializer(serialisedClass.GetType());
             this.serialisedClass = serialisedClass;
             this.path = Environment.CurrentDirectory + @"\" + serialisedClass.GetType().Name + ".xml";
             //The name of the class is based on its type, this ensures a unique default name for saving
             //A new file path can be specified by using the Path setter above
         }
 
+        //Serialise the data from the class passed in the constructor to the xml file path stored in path
         public void Serialise()
         {
             TextWriter WriteFileStream = new StreamWriter(path);           
@@ -54,6 +55,7 @@ namespace BankAccountManager.Classes
             WriteFileStream.Close();
         }
 
+        //Deserilises the xml file to the passed class, this class must be the same type as the soriginal class
         public T Deserialise(T serialisedClass)
         {
             FileStream ReadFileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);

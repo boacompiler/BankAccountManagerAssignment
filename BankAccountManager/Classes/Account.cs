@@ -3,6 +3,9 @@ using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
+    //Account is the base class of our serialised accounts
+    //we must include all other types that will be serialised in our accounts
+    //this allows the serialiser to store the data from othe classes as well as account and its children
     [XmlInclude(typeof(SavingsAccount))]
     [XmlInclude(typeof(CurrentAccount))]
     [XmlInclude(typeof(FixedTermAccount))]
@@ -20,7 +23,7 @@ namespace BankAccountManager.Classes
 
         public Account()
         {
-            //serialisation requires parameterless constructors, so all constructor code has been moved to "SetInitialBalance", this requires an extra line of code for initialisation butprovides a much more robust data management system
+            //serialisation requires parameterless constructors, so all constructor code that sets values has been moved to "SetInitialBalance", this requires an extra line of code for initialisation butprovides a much more robust data management system
             type = "Account";
         }
 
@@ -135,7 +138,6 @@ namespace BankAccountManager.Classes
             }
             else
             {
-                //MessageBox.Show("Debit amount exceeds account balance");
                 throw new System.ArgumentException("Debit amount exceeds account balance");
             }
         }

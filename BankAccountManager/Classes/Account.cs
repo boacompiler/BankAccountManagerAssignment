@@ -13,6 +13,7 @@ namespace BankAccountManager.Classes
         private int acountNumber;
         public Name customerName;
         public Address customerAddress;
+        private string companyName;
         private double accountBalance;
         private string type;
         
@@ -80,6 +81,19 @@ namespace BankAccountManager.Classes
                 customerAddress = value;
             }
         }
+
+        public string Type
+        {
+            get
+            {
+                return type;
+            }
+
+            set
+            {
+                type = value;
+            }
+        }
         //TODO this is sorta redundant due to specifications but much better than specifications...
         public double AccountBalance
         {
@@ -94,16 +108,16 @@ namespace BankAccountManager.Classes
             }
         }
 
-        public string Type
+        public string CompanyName
         {
             get
             {
-                return type;
+                return companyName;
             }
 
             set
             {
-                type = value;
+                companyName = value;
             }
         }
 

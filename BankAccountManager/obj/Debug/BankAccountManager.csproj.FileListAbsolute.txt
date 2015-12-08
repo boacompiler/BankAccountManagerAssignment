@@ -28,3 +28,26 @@ F:\repositories\bank account\BankAccountManager\obj\Debug\BankAccountManager.csp
 C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlMenu.resources
 C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.csprojResolveAssemblyReference.cache
 C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.MainForm.resources
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\BankAccountManager.exe.config
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\BankAccountManager.exe
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\BankAccountManager.pdb
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\mscorlib.dll
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\System.Net.Http.dll
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\System.Net.Http.xml
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\normidna.nlp
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\normnfc.nlp
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\normnfd.nlp
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\normnfkc.nlp
+F:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\normnfkd.nlp
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.csprojResolveAssemblyReference.cache
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.MainForm.resources
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.Properties.Resources.resources
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.TestControl.resources
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlMenu.resources
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlSearch.resources
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.csproj.GenerateResource.Cache
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.exe
+F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.pdb
+E:\repositories\Bank-Account-Manager\BankAccountManager\bin\Debug\BankAccountManager.exe.config
+E:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.exe
+E:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.pdb

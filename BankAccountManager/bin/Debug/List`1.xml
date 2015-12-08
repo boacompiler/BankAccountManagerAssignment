@@ -15,6 +15,25 @@
     </customerAddress>
     <AcountNumber>232</AcountNumber>
     <AccountBalance>100</AccountBalance>
+    <Type>Savings Account</Type>
+    <InterestRate>0.2</InterestRate>
+  </Account>
+  <Account xsi:type="SavingsAccount">
+    <customerName>
+      <honorific>Master</honorific>
+      <FirstName>Reginald</FirstName>
+      <SecondName>coolson</SecondName>
+    </customerName>
+    <customerAddress>
+      <Building>b1</Building>
+      <Road>r1</Road>
+      <Town>t1</Town>
+      <County>c1</County>
+      <PostalCode>G1</PostalCode>
+    </customerAddress>
+    <AcountNumber>232</AcountNumber>
+    <AccountBalance>100</AccountBalance>
+    <Type>Savings Account</Type>
     <InterestRate>0.2</InterestRate>
   </Account>
   <Account xsi:type="CurrentAccount">
@@ -25,6 +44,7 @@
     </customerName>
     <AcountNumber>0</AcountNumber>
     <AccountBalance>500</AccountBalance>
+    <Type>Current Account</Type>
     <OverdraftLimit>100</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
   </Account>
@@ -36,5 +56,12 @@
     </customerName>
     <AcountNumber>0</AcountNumber>
     <AccountBalance>100</AccountBalance>
+    <Type>Account</Type>
+  </Account>
+  <Account xsi:type="SavingsAccount">
+    <AcountNumber>0</AcountNumber>
+    <AccountBalance>1000000</AccountBalance>
+    <Type>Savings Account</Type>
+    <InterestRate>0.2</InterestRate>
   </Account>
 </ArrayOfAccount>

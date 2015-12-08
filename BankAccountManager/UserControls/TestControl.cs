@@ -17,6 +17,7 @@ namespace BankAccountManager.UserControls
         SavingsAccount myAcc;
         CurrentAccount myCAcc;
         Account myTestAcc;
+        SavingsAccount myNamelessAccount;
         List<Account> myList;
         XMLSeriliser<List<Account>> myXML;
 
@@ -34,6 +35,9 @@ namespace BankAccountManager.UserControls
             myCAcc.SetInitialBalance(500,100);
             myTestAcc = new Account();
             myTestAcc.SetInitialBalance(100);
+            myNamelessAccount = new SavingsAccount();
+            myNamelessAccount.SetInitialBalance(1000000,0.2);
+            
             Name n = new Name();
             Name n1 = new Name();
             Name n2 = new Name();
@@ -51,6 +55,7 @@ namespace BankAccountManager.UserControls
             myList.Add(myAcc);
             myList.Add(myCAcc);
             myList.Add(myTestAcc);
+            myList.Add(myNamelessAccount);
             myXML = new XMLSeriliser<List<Account>>(myList);
         }
 
@@ -68,7 +73,18 @@ namespace BankAccountManager.UserControls
         private void button3_Click(object sender, EventArgs e)
         {
             //label1.Text = myList[(int)numericUpDownGet.Value].AccountBalance + "";
-            List<string> nameList = myList.Select(C => C.CustomerName.GetFullName()).ToList();      
+            List<string> nameList =  myList.Select(C =>
+            {
+                try
+                {
+                   return C.CustomerName.GetFullName();
+                }
+                catch (Exception)
+                {
+                    return null;
+                    //throw;
+                }
+            }).ToList();
             MessageBox.Show(string.Join(", ", nameList.ToArray()));
         }
 

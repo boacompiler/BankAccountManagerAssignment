@@ -37,7 +37,7 @@ namespace BankAccountManager
 
             myList = myXML.Deserialise(myList);//TODO remove
 
-            ucm.DisplayControl(testControl);
+            ucm.DisplayControl(searchControl);
         }
     }
 }

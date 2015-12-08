@@ -4,11 +4,14 @@ using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
+    //An implementation of the c# xml seriliser that takes generics, allowing this classes reuse in future projects
+    //objects to be serilised must have parameterless constructors 
+
     public class XMLSeriliser<T>
     {
         
         private string path;
-        private XmlSerializer SerializerObj;
+        private XmlSerializer serializerObj;
         private T serialisedClass;
 
         public string Path
@@ -24,26 +27,24 @@ namespace BankAccountManager.Classes
             }
         }
 
-        public XmlSerializer SerializerObj1
+        public XmlSerializer SerializerObj
         {
             get
             {
-                return SerializerObj;
+                return serializerObj;
             }
-            // no set, this would upset the seriliser, just create a new instance of this class to serilise a different object
+            // no set object, this would upset the seriliser, create a new instance of this class to serilise a different object
         }
 
 
         //TODO i used the uk speling of serilise which does not mesh with the constant american spellings found in the libraries, i may have to change this
         public XMLSeriliser(T serialisedClass)
         {
-            //SerializerObj = new XmlSerializer(typeof(T));
             SerializerObj = new XmlSerializer(serialisedClass.GetType());
-            
             this.serialisedClass = serialisedClass;
             this.path = Environment.CurrentDirectory + @"\" + serialisedClass.GetType().Name + ".xml";
-            //this.path = Environment.CurrentDirectory + @"\test.xml";
-            
+            //The name of the class is based on its type, this ensures a unique default name for saving
+            //A new file path can be specified by using the Path setter above
         }
 
         public void Serialise()

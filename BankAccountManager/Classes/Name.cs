@@ -1,5 +1,6 @@
 ﻿namespace BankAccountManager.Classes
 {
+    //Honorific enum is publicly defined in this file due to it being exclusively used with the Name class, or when the name class is being used. 
     public enum Honorific
     {
         None,

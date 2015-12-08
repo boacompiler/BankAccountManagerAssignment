@@ -12,18 +12,11 @@ namespace BankAccountManager.CustomControls
 {
     public partial class NumericUpDownCurrency : NumericUpDown
     {
-
-        public NumericUpDownCurrency()
-        {
-            
-        }
-
+        //a simple ovveride allows a numeric updown to display currency
+        //the raw double is converted to currency using string formatting, so the displayed value loses precision
         protected override void UpdateEditText()
         {
-            //TODO clean
-            //base.UpdateEditText();
             this.Text = string.Format("{0:C}",this.Value);
-            
         }
 
     }

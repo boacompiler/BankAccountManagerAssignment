@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
-    <Compile Include="Classes\AccountList.cs" />
     <Compile Include="Classes\Address.cs" />
     <Compile Include="Classes\CurrentAccount.cs" />
     <Compile Include="Classes\FixedTermAccount.cs" />

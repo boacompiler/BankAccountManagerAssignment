@@ -51,6 +51,7 @@
     <Compile Include="Classes\CurrentAccount.cs" />
     <Compile Include="Classes\FixedTermAccount.cs" />
     <Compile Include="Classes\Name.cs" />
+    <Compile Include="Classes\PhoneNumber.cs" />
     <Compile Include="Classes\SavingsAccount.cs" />
     <Compile Include="CustomControls\NumericUpDownCurrency.cs">
       <SubType>Component</SubType>

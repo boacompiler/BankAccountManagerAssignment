@@ -27,36 +27,41 @@ namespace BankAccountManager.UserControls
         {
             InitializeComponent();
 
-            
-
             myAcc = new SavingsAccount();
-            myAcc.SetInitialBalance(100,0.2);
-            myCAcc = new CurrentAccount();
-            myCAcc.SetInitialBalance(500,100);
-            myTestAcc = new Account();
-            myTestAcc.SetInitialBalance(100);
-            myNamelessAccount = new SavingsAccount();
-            myNamelessAccount.SetInitialBalance(1000000,0.2);
-            
-            Name n = new Name();
-            Name n1 = new Name();
-            Name n2 = new Name();
-            n.SetFullName("Rob","Paulson",Honorific.Mr);
-            myCAcc.CustomerName = n;
-            n1.SetFullName("bob", "coolson", Honorific.Master);
-            myAcc.CustomerName = n1;
-            n2.SetFullName("dave", "smellyson", Honorific.None);
-            myTestAcc.CustomerName = n2;
-            myAcc.AcountNumber = 232;
-            Address ad = new Address();
-            ad.SetFullAddress("b1", "r1", "t1", "c1", "G1");
-            myAcc.CustomerAddress = ad;
+            myAcc.SetInitialBalance(50,0.2);
+            myAcc.SetCustomerDetails("Bob", "builder",Honorific.None,"b1","r1","t1","c1","GU2","12345678901");
+
             myList = new List<Account>();
             myList.Add(myAcc);
-            myList.Add(myCAcc);
-            myList.Add(myTestAcc);
-            myList.Add(myNamelessAccount);
             myXML = new XMLSeriliser<List<Account>>(myList);
+            //myAcc = new SavingsAccount();
+            //myAcc.SetInitialBalance(100,0.2);
+            //myCAcc = new CurrentAccount();
+            //myCAcc.SetInitialBalance(500,100);
+            //myTestAcc = new Account();
+            //myTestAcc.SetInitialBalance(100);
+            //myNamelessAccount = new SavingsAccount();
+            //myNamelessAccount.SetInitialBalance(1000000,0.2);
+            
+            //Name n = new Name();
+            //Name n1 = new Name();
+            //Name n2 = new Name();
+            //n.SetFullName("Rob","Paulson",Honorific.Mr);
+            //myCAcc.CustomerName = n;
+            //n1.SetFullName("bob", "coolson", Honorific.Master);
+            //myAcc.CustomerName = n1;
+            //n2.SetFullName("dave", "smellyson", Honorific.None);
+            //myTestAcc.CustomerName = n2;
+            //myAcc.AcountNumber = 232;
+            //Address ad = new Address();
+            //ad.SetFullAddress("b1", "r1", "t1", "c1", "G1");
+            //myAcc.CustomerAddress = ad;
+            //myList = new List<Account>();
+            //myList.Add(myAcc);
+            //myList.Add(myCAcc);
+            //myList.Add(myTestAcc);
+            //myList.Add(myNamelessAccount);
+            //myXML = new XMLSeriliser<List<Account>>(myList);
         }
 
         private void button1_Click(object sender, EventArgs e)

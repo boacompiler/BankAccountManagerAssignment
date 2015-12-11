@@ -1,5 +1,4 @@
-﻿//using System.Windows.Forms;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace BankAccountManager.Classes
 {
@@ -11,11 +10,13 @@ namespace BankAccountManager.Classes
     [XmlInclude(typeof(FixedTermAccount))]
     [XmlInclude(typeof(Name))]
     [XmlInclude(typeof(Address))]
+    [XmlInclude(typeof(PhoneNumber))]
     public class Account
     {
         private int acountNumber;
         public Name customerName;
         public Address customerAddress;
+        public PhoneNumber customerPhone;
         private string companyName;
         private double accountBalance;
         private string type;
@@ -42,8 +43,16 @@ namespace BankAccountManager.Classes
             }
             //accountBalance = (initialBalance >= 0) ? initialBalance : 0;
             //TODO clean this up, and maybe come up with a better solution, but this is directly asked for in the specs
-            
+        }
 
+        public void SetCustomerDetails(string firstName, string secondName, Honorific honorific, string building, string road, string town, string county, string postalCode, string phoneNumber)
+        {
+            customerName = new Name();
+            customerName.SetFullName(firstName, secondName, honorific);
+            customerAddress = new Address();
+            customerAddress.SetFullAddress(building,road,town,county,postalCode);
+            customerPhone = new PhoneNumber();
+            customerPhone.Number = phoneNumber;
         }
 
         public int AcountNumber

@@ -38,11 +38,11 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownGet = new System.Windows.Forms.NumericUpDown();
-            this.myCustomClass = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.numericUpDownCurrency1 = new BankAccountManager.CustomControls.NumericUpDownCurrency();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCustomClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrency1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,18 +131,18 @@
             this.numericUpDownGet.Size = new System.Drawing.Size(75, 20);
             this.numericUpDownGet.TabIndex = 10;
             // 
-            // myCustomClass
+            // numericUpDownCurrency1
             // 
-            this.myCustomClass.Location = new System.Drawing.Point(16, 151);
-            this.myCustomClass.Name = "myCustomClass";
-            this.myCustomClass.Size = new System.Drawing.Size(75, 20);
-            this.myCustomClass.TabIndex = 10;
+            this.numericUpDownCurrency1.Location = new System.Drawing.Point(160, 59);
+            this.numericUpDownCurrency1.Name = "numericUpDownCurrency1";
+            this.numericUpDownCurrency1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownCurrency1.TabIndex = 11;
             // 
             // TestControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.myCustomClass);
+            this.Controls.Add(this.numericUpDownCurrency1);
             this.Controls.Add(this.numericUpDownGet);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
@@ -158,7 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCustomClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrency1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +176,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDownGet;
-        private BankAccountManager.CustomControls.NumericUpDownCurrency myCustomClass;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrency1;
+        //private BankAccountManager.CustomControls.NumericUpDownCurrency myCustomClass;
     }
 }

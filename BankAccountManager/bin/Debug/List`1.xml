@@ -2,66 +2,23 @@
 <ArrayOfAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Account xsi:type="SavingsAccount">
     <customerName>
-      <honorific>Master</honorific>
-      <FirstName>bob</FirstName>
-      <SecondName>coolson</SecondName>
-    </customerName>
-    <customerAddress>
-      <Building>b1</Building>
-      <Road>r1</Road>
-      <Town>t1</Town>
-      <County>c1</County>
-      <PostalCode>G1</PostalCode>
-    </customerAddress>
-    <AcountNumber>232</AcountNumber>
-    <AccountBalance>100</AccountBalance>
-    <Type>Savings Account</Type>
-    <InterestRate>0.2</InterestRate>
-  </Account>
-  <Account xsi:type="SavingsAccount">
-    <customerName>
-      <honorific>Master</honorific>
-      <FirstName>Reginald</FirstName>
-      <SecondName>coolson</SecondName>
-    </customerName>
-    <customerAddress>
-      <Building>b1</Building>
-      <Road>r1</Road>
-      <Town>t1</Town>
-      <County>c1</County>
-      <PostalCode>G1</PostalCode>
-    </customerAddress>
-    <AcountNumber>232</AcountNumber>
-    <AccountBalance>100</AccountBalance>
-    <Type>Savings Account</Type>
-    <InterestRate>0.2</InterestRate>
-  </Account>
-  <Account xsi:type="CurrentAccount">
-    <customerName>
-      <honorific>Mr</honorific>
-      <FirstName>Rob</FirstName>
-      <SecondName>Paulson</SecondName>
-    </customerName>
-    <AcountNumber>0</AcountNumber>
-    <AccountBalance>500</AccountBalance>
-    <Type>Current Account</Type>
-    <OverdraftLimit>100</OverdraftLimit>
-    <OverdraftPenalty>5</OverdraftPenalty>
-  </Account>
-  <Account>
-    <customerName>
       <honorific>None</honorific>
-      <FirstName>dave</FirstName>
-      <SecondName>smellyson</SecondName>
+      <FirstName>Bob</FirstName>
+      <SecondName>builder</SecondName>
     </customerName>
+    <customerAddress>
+      <Building>b1</Building>
+      <Road>r1</Road>
+      <Town>t1</Town>
+      <County>c1</County>
+      <PostalCode>GU2</PostalCode>
+    </customerAddress>
+    <customerPhone>
+      <Number>12345678901</Number>
+    </customerPhone>
     <AcountNumber>0</AcountNumber>
-    <AccountBalance>100</AccountBalance>
-    <Type>Account</Type>
-  </Account>
-  <Account xsi:type="SavingsAccount">
-    <AcountNumber>0</AcountNumber>
-    <AccountBalance>1000000</AccountBalance>
     <Type>Savings Account</Type>
+    <AccountBalance>50</AccountBalance>
     <InterestRate>0.2</InterestRate>
   </Account>
 </ArrayOfAccount>

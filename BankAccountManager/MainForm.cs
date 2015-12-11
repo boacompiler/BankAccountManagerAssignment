@@ -35,9 +35,9 @@ namespace BankAccountManager
             myList = new List<Account>();
             myXML = new XMLSeriliser<List<Account>>(myList);
 
-            myList = myXML.Deserialise(myList);//TODO remove
+            myList = myXML.Deserialise(myList);//TODO remove, this is for testing
 
-            ucm.DisplayControl(testControl);
+            ucm.DisplayControl(menuControl);
         }
     }
 }

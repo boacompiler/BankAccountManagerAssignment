@@ -21,4 +21,25 @@
     <AccountBalance>50</AccountBalance>
     <InterestRate>0.2</InterestRate>
   </Account>
+  <Account xsi:type="SavingsAccount">
+    <customerName>
+      <honorific>None</honorific>
+      <FirstName>Thomas</FirstName>
+      <SecondName>Tank</SecondName>
+    </customerName>
+    <customerAddress>
+      <Building>b1</Building>
+      <Road>r1</Road>
+      <Town>t1</Town>
+      <County>Sodor</County>
+      <PostalCode>GU2</PostalCode>
+    </customerAddress>
+    <customerPhone>
+      <Number>12345678901</Number>
+    </customerPhone>
+    <AcountNumber>0</AcountNumber>
+    <Type>Savings Account</Type>
+    <AccountBalance>75</AccountBalance>
+    <InterestRate>0.01</InterestRate>
+  </Account>
 </ArrayOfAccount>

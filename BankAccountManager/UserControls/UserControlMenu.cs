@@ -25,7 +25,8 @@ namespace BankAccountManager.UserControls
             listView1.Items.Clear();
             foreach (Account account in MainForm.myList)
             {
-                ListViewItem item = new ListViewItem(new string[] { account.customerName.GetFullName(), account.Type, "SubItem3", "And so on" });
+                //ListViewItem item = new ListViewItem(new string[] { account.customerName.GetFullName(), account.Type, "SubItem3", "And so on" });
+                ListViewItem item = new ListViewItem("poop");
                 listView1.Items.Add(item);
             }
         }
@@ -43,6 +44,11 @@ namespace BankAccountManager.UserControls
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(MainForm.myList[0].customerName.GetFullName());
         }
     }
 }

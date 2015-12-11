@@ -35,8 +35,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.comboBoxAccountCriteria = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -74,8 +74,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.listView1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button5, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonSearch, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.comboBoxAccountCriteria, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(103, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -100,6 +100,18 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Width = 87;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Width = 85;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Width = 88;
+            // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -108,22 +120,24 @@
             this.textBox1.Size = new System.Drawing.Size(240, 20);
             this.textBox1.TabIndex = 1;
             // 
-            // button5
+            // buttonSearch
             // 
-            this.button5.Location = new System.Drawing.Point(376, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonSearch.Location = new System.Drawing.Point(376, 3);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 2;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // comboBox1
+            // comboBoxAccountCriteria
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(249, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxAccountCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAccountCriteria.FormattingEnabled = true;
+            this.comboBoxAccountCriteria.Location = new System.Drawing.Point(249, 3);
+            this.comboBoxAccountCriteria.Name = "comboBoxAccountCriteria";
+            this.comboBoxAccountCriteria.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxAccountCriteria.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -229,8 +243,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox comboBoxAccountCriteria;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button1;

@@ -10,10 +10,10 @@
             this.Type = "Current Account";
         }
 
-        public void SetInitialBalance(double initialBalance, double initialOverdraftLimit)
+        public void SetInitialBalance(double initialBalance, double initialOverdraftLimit, double initialOverdraftPenalty)
         {
             overdraftLimit = initialOverdraftLimit;
-            overdraftPenalty = 5;
+            overdraftPenalty = initialOverdraftPenalty;
             base.SetInitialBalance(initialBalance);
         }
 

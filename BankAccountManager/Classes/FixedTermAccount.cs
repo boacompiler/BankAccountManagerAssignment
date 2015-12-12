@@ -2,7 +2,7 @@
 {
     public class FixedTermAccount : Account
     {
-        double transactionFee;
+        private double transactionFee;
 
         public FixedTermAccount()
         {

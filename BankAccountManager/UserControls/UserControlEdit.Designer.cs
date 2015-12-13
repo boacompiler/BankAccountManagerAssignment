@@ -59,14 +59,27 @@
             this.groupBoxAccountDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.labelBalance = new System.Windows.Forms.Label();
+            this.numericUpDownCurrencyBalance = new BankAccountManager.CustomControls.NumericUpDownCurrency();
             this.labelType = new System.Windows.Forms.Label();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.numericUpDownCurrencyBalance = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.panelCurrentAccount = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDownCurrencyOverdraftPenalty = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.numericUpDownCurrencyOverdraftLimit = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.labelOverdraftPenalty = new System.Windows.Forms.Label();
+            this.labelOverdraftLimit = new System.Windows.Forms.Label();
+            this.panelSavingsAccount = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDownCurrencyInterestRate = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.labelInterestRate = new System.Windows.Forms.Label();
+            this.panelFixedTermAccount = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelTransactionFee = new System.Windows.Forms.Label();
+            this.numericUpDownCurrencyTransactionFee = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.panelAccountDetails = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxCustomerDetails.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -77,10 +90,19 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBoxAccountDetails.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyBalance)).BeginInit();
+            this.panelCurrentAccount.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftPenalty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftLimit)).BeginInit();
+            this.panelSavingsAccount.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyInterestRate)).BeginInit();
+            this.panelFixedTermAccount.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyTransactionFee)).BeginInit();
+            this.panelAccountDetails.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,12 +111,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.groupBoxCustomerDetails, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBoxAccountDetails, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel10, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 840);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -395,17 +419,19 @@
             // 
             // groupBoxAccountDetails
             // 
+            this.groupBoxAccountDetails.AutoSize = true;
             this.groupBoxAccountDetails.Controls.Add(this.tableLayoutPanel6);
             this.groupBoxAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxAccountDetails.Location = new System.Drawing.Point(3, 306);
             this.groupBoxAccountDetails.Name = "groupBoxAccountDetails";
-            this.groupBoxAccountDetails.Size = new System.Drawing.Size(510, 531);
+            this.groupBoxAccountDetails.Size = new System.Drawing.Size(510, 496);
             this.groupBoxAccountDetails.TabIndex = 1;
             this.groupBoxAccountDetails.TabStop = false;
             this.groupBoxAccountDetails.Text = "Account Details";
             // 
             // tableLayoutPanel6
             // 
+            this.tableLayoutPanel6.AutoSize = true;
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -413,15 +439,16 @@
             this.tableLayoutPanel6.Controls.Add(this.numericUpDownCurrencyBalance, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.labelType, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.comboBoxType, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.panel1, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.panelAccountDetails, 1, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(504, 512);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(504, 477);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // labelBalance
@@ -432,6 +459,24 @@
             this.labelBalance.Size = new System.Drawing.Size(46, 13);
             this.labelBalance.TabIndex = 0;
             this.labelBalance.Text = "Balance";
+            // 
+            // numericUpDownCurrencyBalance
+            // 
+            this.numericUpDownCurrencyBalance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCurrencyBalance.Location = new System.Drawing.Point(55, 3);
+            this.numericUpDownCurrencyBalance.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDownCurrencyBalance.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownCurrencyBalance.Name = "numericUpDownCurrencyBalance";
+            this.numericUpDownCurrencyBalance.Size = new System.Drawing.Size(446, 20);
+            this.numericUpDownCurrencyBalance.TabIndex = 0;
             // 
             // labelType
             // 
@@ -453,69 +498,221 @@
             this.comboBoxType.TabIndex = 1;
             this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
-            // panel1
+            // panelCurrentAccount
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(55, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(446, 453);
-            this.panel1.TabIndex = 3;
+            this.panelCurrentAccount.AutoSize = true;
+            this.panelCurrentAccount.Controls.Add(this.tableLayoutPanel7);
+            this.panelCurrentAccount.Location = new System.Drawing.Point(3, 3);
+            this.panelCurrentAccount.Name = "panelCurrentAccount";
+            this.panelCurrentAccount.Size = new System.Drawing.Size(437, 76);
+            this.panelCurrentAccount.TabIndex = 1;
             // 
-            // panel2
+            // tableLayoutPanel7
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(437, 101);
-            this.panel2.TabIndex = 1;
+            this.tableLayoutPanel7.AutoSize = true;
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.labelOverdraftLimit, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.labelOverdraftPenalty, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.numericUpDownCurrencyOverdraftLimit, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.numericUpDownCurrencyOverdraftPenalty, 1, 1);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(437, 76);
+            this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // panel3
+            // numericUpDownCurrencyOverdraftPenalty
             // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(3, 110);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(437, 101);
-            this.panel3.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(437, 101);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(437, 101);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownCurrencyBalance
-            // 
-            this.numericUpDownCurrencyBalance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDownCurrencyBalance.Location = new System.Drawing.Point(55, 3);
-            this.numericUpDownCurrencyBalance.Maximum = new decimal(new int[] {
+            this.numericUpDownCurrencyOverdraftPenalty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCurrencyOverdraftPenalty.Location = new System.Drawing.Point(98, 29);
+            this.numericUpDownCurrencyOverdraftPenalty.Maximum = new decimal(new int[] {
             1000000000,
             0,
             0,
             0});
-            this.numericUpDownCurrencyBalance.Minimum = new decimal(new int[] {
+            this.numericUpDownCurrencyOverdraftPenalty.Minimum = new decimal(new int[] {
             1000000,
             0,
             0,
             -2147483648});
-            this.numericUpDownCurrencyBalance.Name = "numericUpDownCurrencyBalance";
-            this.numericUpDownCurrencyBalance.Size = new System.Drawing.Size(446, 20);
-            this.numericUpDownCurrencyBalance.TabIndex = 0;
+            this.numericUpDownCurrencyOverdraftPenalty.Name = "numericUpDownCurrencyOverdraftPenalty";
+            this.numericUpDownCurrencyOverdraftPenalty.Size = new System.Drawing.Size(336, 20);
+            this.numericUpDownCurrencyOverdraftPenalty.TabIndex = 3;
+            // 
+            // numericUpDownCurrencyOverdraftLimit
+            // 
+            this.numericUpDownCurrencyOverdraftLimit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCurrencyOverdraftLimit.Location = new System.Drawing.Point(98, 3);
+            this.numericUpDownCurrencyOverdraftLimit.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDownCurrencyOverdraftLimit.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownCurrencyOverdraftLimit.Name = "numericUpDownCurrencyOverdraftLimit";
+            this.numericUpDownCurrencyOverdraftLimit.Size = new System.Drawing.Size(336, 20);
+            this.numericUpDownCurrencyOverdraftLimit.TabIndex = 2;
+            // 
+            // labelOverdraftPenalty
+            // 
+            this.labelOverdraftPenalty.AutoSize = true;
+            this.labelOverdraftPenalty.Location = new System.Drawing.Point(3, 26);
+            this.labelOverdraftPenalty.Name = "labelOverdraftPenalty";
+            this.labelOverdraftPenalty.Size = new System.Drawing.Size(89, 13);
+            this.labelOverdraftPenalty.TabIndex = 1;
+            this.labelOverdraftPenalty.Text = "Overdraft Penalty";
+            // 
+            // labelOverdraftLimit
+            // 
+            this.labelOverdraftLimit.AutoSize = true;
+            this.labelOverdraftLimit.Location = new System.Drawing.Point(3, 0);
+            this.labelOverdraftLimit.Name = "labelOverdraftLimit";
+            this.labelOverdraftLimit.Size = new System.Drawing.Size(75, 13);
+            this.labelOverdraftLimit.TabIndex = 0;
+            this.labelOverdraftLimit.Text = "Overdraft Limit";
+            // 
+            // panelSavingsAccount
+            // 
+            this.panelSavingsAccount.AutoSize = true;
+            this.panelSavingsAccount.Controls.Add(this.tableLayoutPanel8);
+            this.panelSavingsAccount.Location = new System.Drawing.Point(3, 85);
+            this.panelSavingsAccount.Name = "panelSavingsAccount";
+            this.panelSavingsAccount.Size = new System.Drawing.Size(437, 101);
+            this.panelSavingsAccount.TabIndex = 2;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.AutoSize = true;
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Controls.Add(this.labelInterestRate, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.numericUpDownCurrencyInterestRate, 1, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(437, 101);
+            this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // numericUpDownCurrencyInterestRate
+            // 
+            this.numericUpDownCurrencyInterestRate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCurrencyInterestRate.Location = new System.Drawing.Point(77, 3);
+            this.numericUpDownCurrencyInterestRate.Name = "numericUpDownCurrencyInterestRate";
+            this.numericUpDownCurrencyInterestRate.Size = new System.Drawing.Size(357, 20);
+            this.numericUpDownCurrencyInterestRate.TabIndex = 1;
+            // 
+            // labelInterestRate
+            // 
+            this.labelInterestRate.AutoSize = true;
+            this.labelInterestRate.Location = new System.Drawing.Point(3, 0);
+            this.labelInterestRate.Name = "labelInterestRate";
+            this.labelInterestRate.Size = new System.Drawing.Size(68, 13);
+            this.labelInterestRate.TabIndex = 0;
+            this.labelInterestRate.Text = "Interest Rate";
+            // 
+            // panelFixedTermAccount
+            // 
+            this.panelFixedTermAccount.AutoSize = true;
+            this.panelFixedTermAccount.Controls.Add(this.tableLayoutPanel9);
+            this.panelFixedTermAccount.Location = new System.Drawing.Point(3, 192);
+            this.panelFixedTermAccount.Name = "panelFixedTermAccount";
+            this.panelFixedTermAccount.Size = new System.Drawing.Size(437, 101);
+            this.panelFixedTermAccount.TabIndex = 3;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.AutoSize = true;
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.numericUpDownCurrencyTransactionFee, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.labelTransactionFee, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(437, 101);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // labelTransactionFee
+            // 
+            this.labelTransactionFee.AutoSize = true;
+            this.labelTransactionFee.Location = new System.Drawing.Point(3, 0);
+            this.labelTransactionFee.Name = "labelTransactionFee";
+            this.labelTransactionFee.Size = new System.Drawing.Size(84, 13);
+            this.labelTransactionFee.TabIndex = 1;
+            this.labelTransactionFee.Text = "Transaction Fee";
+            // 
+            // numericUpDownCurrencyTransactionFee
+            // 
+            this.numericUpDownCurrencyTransactionFee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCurrencyTransactionFee.Location = new System.Drawing.Point(93, 3);
+            this.numericUpDownCurrencyTransactionFee.Name = "numericUpDownCurrencyTransactionFee";
+            this.numericUpDownCurrencyTransactionFee.Size = new System.Drawing.Size(341, 20);
+            this.numericUpDownCurrencyTransactionFee.TabIndex = 0;
+            // 
+            // panelAccountDetails
+            // 
+            this.panelAccountDetails.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.panelAccountDetails, 2);
+            this.panelAccountDetails.Controls.Add(this.panelFixedTermAccount);
+            this.panelAccountDetails.Controls.Add(this.panelSavingsAccount);
+            this.panelAccountDetails.Controls.Add(this.panelCurrentAccount);
+            this.panelAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAccountDetails.Location = new System.Drawing.Point(3, 56);
+            this.panelAccountDetails.Name = "panelAccountDetails";
+            this.panelAccountDetails.Size = new System.Drawing.Size(498, 418);
+            this.panelAccountDetails.TabIndex = 3;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.AutoSize = true;
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel10.Controls.Add(this.buttonCancel, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.buttonSave, 1, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 808);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(510, 29);
+            this.tableLayoutPanel10.TabIndex = 2;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonSave.Location = new System.Drawing.Point(351, 3);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 0;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonCancel.Location = new System.Drawing.Point(432, 3);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // UserControlEdit
             // 
@@ -541,12 +738,29 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.groupBoxAccountDetails.ResumeLayout(false);
+            this.groupBoxAccountDetails.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyBalance)).EndInit();
+            this.panelCurrentAccount.ResumeLayout(false);
+            this.panelCurrentAccount.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftPenalty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftLimit)).EndInit();
+            this.panelSavingsAccount.ResumeLayout(false);
+            this.panelSavingsAccount.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyInterestRate)).EndInit();
+            this.panelFixedTermAccount.ResumeLayout(false);
+            this.panelFixedTermAccount.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyTransactionFee)).EndInit();
+            this.panelAccountDetails.ResumeLayout(false);
+            this.panelAccountDetails.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -582,15 +796,28 @@
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label labelBalance;
-        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyBalance;
         private System.Windows.Forms.Label labelCompanyName;
         private System.Windows.Forms.TextBox textBoxCompanyName;
         private System.Windows.Forms.Label labelType;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyBalance;
         private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelAccountDetails;
+        private System.Windows.Forms.Panel panelFixedTermAccount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyTransactionFee;
+        private System.Windows.Forms.Label labelTransactionFee;
+        private System.Windows.Forms.Panel panelSavingsAccount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label labelInterestRate;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyInterestRate;
+        private System.Windows.Forms.Panel panelCurrentAccount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label labelOverdraftLimit;
+        private System.Windows.Forms.Label labelOverdraftPenalty;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyOverdraftLimit;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyOverdraftPenalty;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

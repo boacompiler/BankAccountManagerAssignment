@@ -28,14 +28,22 @@ namespace BankAccountManager.UserControls
             {
                 default:
                 case 0:
-                    panel2.Hide();
-                    panel3.Show();
-                    panel3.Dock = DockStyle.Fill;
+                    panelSavingsAccount.Hide();
+                    panelFixedTermAccount.Hide();
+                    panelCurrentAccount.Show();
+                    panelCurrentAccount.Dock = DockStyle.Fill;
                     break;
                 case 1:
-                    panel3.Hide();
-                    panel2.Show();
-                    panel2.Dock = DockStyle.Fill;
+                    panelCurrentAccount.Hide();
+                    panelFixedTermAccount.Hide();
+                    panelSavingsAccount.Show();
+                    panelSavingsAccount.Dock = DockStyle.Fill;
+                    break;
+                case 2:
+                    panelCurrentAccount.Hide();
+                    panelSavingsAccount.Hide();
+                    panelFixedTermAccount.Show();
+                    panelFixedTermAccount.Dock = DockStyle.Fill;
                     break;
             }
         }

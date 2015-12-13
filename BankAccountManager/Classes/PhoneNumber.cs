@@ -22,9 +22,16 @@ namespace BankAccountManager.Classes
 
             set 
             {
+                double d; //we need a double to use tryparse
+                value = value.Replace(" ","");//removes spaces from entered numbers
+
                 if (value.Length > 11)
                 {
                     throw new System.ArgumentException("Telephone number too long");
+                }
+                else if (!double.TryParse(value,out d))
+                {
+                    throw new System.ArgumentException("Telephone number uses invalid characters");
                 }
                 else
                 {

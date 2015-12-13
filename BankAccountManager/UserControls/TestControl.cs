@@ -30,6 +30,7 @@ namespace BankAccountManager.UserControls
             myAcc = new SavingsAccount();
             myAcc.SetInitialBalance(50,0.2);
             myAcc.SetCustomerDetails("Bob", "builder",Honorific.None,"b1","r1","t1","c1","GU2","12345678901");
+            myAcc.customerPhone.Number = "123456 78910";
 
             myList = new List<Account>();
             myList.Add(myAcc);
@@ -91,6 +92,7 @@ namespace BankAccountManager.UserControls
                 }
             }).ToList();
             MessageBox.Show(string.Join(", ", nameList.ToArray()));
+            MessageBox.Show(myList[0].customerPhone.Number);
         }
 
         private void button4_Click(object sender, EventArgs e)

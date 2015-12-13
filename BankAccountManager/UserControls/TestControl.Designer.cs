@@ -39,6 +39,7 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownGet = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownCurrency1 = new BankAccountManager.CustomControls.NumericUpDownCurrency();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGet)).BeginInit();
@@ -138,10 +139,21 @@
             this.numericUpDownCurrency1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownCurrency1.TabIndex = 11;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(0, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // TestControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.numericUpDownCurrency1);
             this.Controls.Add(this.numericUpDownGet);
             this.Controls.Add(this.numericUpDown2);
@@ -177,6 +189,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDownGet;
         private CustomControls.NumericUpDownCurrency numericUpDownCurrency1;
+        private System.Windows.Forms.CheckBox checkBox1;
         //private BankAccountManager.CustomControls.NumericUpDownCurrency myCustomClass;
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace BankAccountManager
@@ -14,8 +9,28 @@ namespace BankAccountManager
         private Form myForm;
         private List<UserControl> userControls;
 
-        public Form MyForm { get { return this.myForm; } set { this.myForm = value; } }
-        public List<UserControl> UserControls { get { return this.userControls; } set { this.userControls = value; } }
+        public Form MyForm
+        {
+            get
+            {
+                return this.myForm;
+            }
+            set
+            {
+                this.myForm = value;
+            }
+        }
+        public List<UserControl> UserControls
+        {
+            get
+            {
+                return this.userControls;
+            }
+            set
+            {
+                this.userControls = value;
+            }
+        }
 
         /// <summary>
         /// Control switching between controls on a single form

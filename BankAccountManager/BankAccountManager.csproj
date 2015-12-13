@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +71,12 @@
     <Compile Include="UserControls\TestControl.Designer.cs">
       <DependentUpon>TestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlEdit.Designer.cs">
+      <DependentUpon>UserControlEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlManager.cs" />
     <Compile Include="Classes\XMLSeriliser.cs" />
     <Compile Include="UserControls\UserControlMenu.cs">
@@ -98,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\TestControl.resx">
       <DependentUpon>TestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlEdit.resx">
+      <DependentUpon>UserControlEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlMenu.resx">
       <DependentUpon>UserControlMenu.cs</DependentUpon>

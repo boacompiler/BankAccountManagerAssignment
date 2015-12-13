@@ -20,7 +20,6 @@ namespace BankAccountManager.Classes
         private string companyName;
         private double accountBalance;
         private string type;
-        //TODO phone number
 
         public Account()
         {

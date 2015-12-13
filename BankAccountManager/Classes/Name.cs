@@ -8,7 +8,8 @@
         Master,
         Ms,
         Miss,
-        Mrs
+        Mrs,
+        Dr
     }
 
     public class Name

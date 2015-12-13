@@ -16,22 +16,19 @@ namespace BankAccountManager
 {
     public partial class MainForm : Form
     {
-        public static TestControl testControl;
-        public static UserControlSearch searchControl;
-        public static UserControlMenu menuControl;
-        public static UserControlEdit editControl;
         public static UserControlManager ucm;
 
         public static List<Account> myList;
         public static XMLSeriliser<List<Account>> myXML;
 
+        public static TestControl testControl;
+        public static UserControlSearch searchControl;
+        public static UserControlMenu menuControl;
+        public static UserControlEdit editControl;
+
         public MainForm()
         {
             InitializeComponent();
-            testControl = new TestControl();
-            searchControl = new UserControlSearch();
-            menuControl = new UserControlMenu();
-            editControl = new UserControlEdit();
             ucm = new UserControlManager(this);
 
             myList = new List<Account>();
@@ -39,7 +36,12 @@ namespace BankAccountManager
 
             myList = myXML.Deserialise(myList);//TODO remove, this is for testing, or is it?
 
-            ucm.DisplayControl(editControl);
+            testControl = new TestControl();
+            searchControl = new UserControlSearch();
+            menuControl = new UserControlMenu();
+            editControl = new UserControlEdit();
+
+            ucm.DisplayControl(menuControl);
         }
     }
 }

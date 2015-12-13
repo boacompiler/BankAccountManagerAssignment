@@ -47,5 +47,10 @@ namespace BankAccountManager.UserControls
                     break;
             }
         }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            MainForm.ucm.DisplayControl(MainForm.menuControl);
+        }
     }
 }

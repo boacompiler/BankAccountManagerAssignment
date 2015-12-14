@@ -41,7 +41,7 @@ namespace BankAccountManager
             menuControl = new UserControlMenu();
             editControl = new UserControlEdit();
 
-            ucm.DisplayControl(menuControl);
+            ucm.DisplayControl(testControl);
         }
     }
 }

@@ -41,13 +41,13 @@ namespace BankAccountManager.UserControls
                         result = (account.Type.ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 2:
-                        result = (account.AccountBalance.ToString().ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO convert to currency is probably required
+                        result = (string.Format("{0:C}", account.AccountBalance).ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 3:
                         result = (account.customerAddress.GetFullAddress().ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 4:
-                        result = (account.customerPhone.Number.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO strip spaces
+                        result = (account.customerPhone.Number.ToLower().Contains(textBoxSearch.Text.ToLower().Replace(" ","")));
                         break;
                     case 5:
                         result = (account.CompanyName.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO handle for null

@@ -97,7 +97,103 @@ namespace BankAccountManager.UserControls
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MainForm.ucm.DisplayControl(MainForm.searchControl);
+            //MainForm.ucm.DisplayControl(MainForm.searchControl);
+            // generate xml
+            MainForm.myList.Clear();
+            Random r = new Random();
+            string[] names = new string[] {"Lili",
+                                            "Lan",
+                                            "Shoshana",
+                                            "Arnold",
+                                            "Ariane",
+                                            "Gertude",
+                                            "Maragret",
+                                            "Rosaline",
+                                            "Christena",
+                                            "Romona",
+                                            "Nadine",
+                                            "Melonie",
+                                            "Terica",
+                                            "Mikaela",
+                                            "Katia",
+                                            "Geraldine",
+                                            "Donovan",
+                                            "Leonore",
+                                            "Shiela",
+                                            "Claribel",
+                                            "Grayce",
+                                            "Terra",
+                                            "Jessica",
+                                            "Luisa",
+                                            "Traci",
+                                            "Elinore",
+                                            "Jonas",
+                                            "Michelle",
+                                            "Denae",
+                                            "Tamiko",
+                                            "Edmond",
+                                            "Willy",
+                                            "Sonia",
+                                            "Janie",
+                                            "Mikki",
+                                            "Madeline",
+                                            "Mckinley",
+                                            "Blake",
+                                            "Zenobia",
+                                            "Olen",
+                                            "Rosario",
+                                            "Jammie",
+                                            "Emely",
+                                            "Cruz",
+                                            "Britta",
+                                            "Iona",
+                                            "Belinda",
+                                            "Evita",
+                                            "Marilee",
+                                            "Rayna"};
+
+            for (int i = 0; i < 50; i++)
+            {
+                switch (r.Next(0,3))
+                {
+                    default:
+                    case 0:
+                        SavingsAccount mySAcc = new SavingsAccount();
+                        mySAcc.SetInitialBalance(r.Next(10,10000),r.NextDouble()* (0.8 - 0.1) + 0.1);
+                        mySAcc.SetCustomerDetails(names[r.Next(0, 49)], names[r.Next(0, 49)], (Honorific)r.Next(0,6), "b1", "r1", "t1", "c1", "GU2", "12345678901");
+                        mySAcc.customerPhone.Number = "123456 78910";
+                        mySAcc.AcountNumber = r.Next(10000000);
+                        MainForm.myList.Add(mySAcc);
+                        break;
+                    case 1:
+                        CurrentAccount myCAcc = new CurrentAccount();
+                        myCAcc.SetInitialBalance(r.Next(10,10000),r.Next(50,100),5);
+                        myCAcc.SetCustomerDetails(names[r.Next(0, 49)], names[r.Next(0, 49)], (Honorific)r.Next(0,6), "b1", "r1", "t1", "c1", "GU2", "12345678901");
+                        myCAcc.customerPhone.Number = "123456 78910";
+                        myCAcc.AcountNumber = r.Next(10000000);
+                        MainForm.myList.Add(myCAcc);
+                        break;
+                    case 2:
+                        FixedTermAccount myFAcc = new FixedTermAccount();
+                        myFAcc.SetInitialBalance(10000000);
+                        myFAcc.SetCustomerDetails(names[r.Next(0, 49)], names[r.Next(0, 49)], (Honorific)r.Next(0,6), "b1", "r1", "t1", "c1", "GU2", "12345678901");
+                        myFAcc.customerPhone.Number = "123456 78910";
+                        myFAcc.CompanyName = names[r.Next(0, 49)] + " inc";
+                        myFAcc.AcountNumber = r.Next(10000000);
+                        MainForm.myList.Add(myFAcc);
+                        break;
+                }
+            }
+            //MainForm.myXML.Serialise();
+            XMLSeriliser<List<Account>> myaXML;
+            myaXML = new XMLSeriliser<List<Account>>(MainForm.myList);
+            myaXML.Serialise();
+            MessageBox.Show("done " + MainForm.myList[0].customerName.GetFullName());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MainForm.ucm.DisplayControl(MainForm.menuControl);
         }
     }
 }

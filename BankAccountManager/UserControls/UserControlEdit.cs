@@ -52,5 +52,10 @@ namespace BankAccountManager.UserControls
         {
             MainForm.ucm.DisplayControl(MainForm.menuControl);
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            MainForm.ucm.DisplayControl(MainForm.menuControl);
+        }
     }
 }

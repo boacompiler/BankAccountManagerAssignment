@@ -25,10 +25,41 @@ namespace BankAccountManager.UserControls
         void FillView()
         {
             listView1.Items.Clear();
+
+            
+
             foreach (Account account in MainForm.myList)
             {
-                ListViewItem item = new ListViewItem(new string[] { account.customerName.GetFullName(), account.Type, string.Format("{0:C}", account.AccountBalance), account.customerAddress.GetFullAddress(),account.customerPhone.Number,account.CompanyName});//TODO finish
-                listView1.Items.Add(item);
+                bool result = false;
+                switch (comboBoxAccountCriteria.SelectedIndex)
+                {
+                    default:
+                    case 0:
+                        result = (account.CustomerName.GetFullName().ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        break;
+                    case 1:
+                        result = (account.Type.ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        break;
+                    case 2:
+                        result = (account.AccountBalance.ToString().ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO convert to currency is probably required
+                        break;
+                    case 3:
+                        result = (account.customerAddress.GetFullAddress().ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        break;
+                    case 4:
+                        result = (account.customerPhone.Number.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO strip spaces
+                        break;
+                    case 5:
+                        result = (account.CompanyName.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO handle for null
+                        break;
+                }
+
+                if (result || textBoxSearch.Text == "")
+                {
+                    ListViewItem item = new ListViewItem(new string[] { account.customerName.GetFullName(), account.Type, string.Format("{0:C}", account.AccountBalance), account.customerAddress.GetFullAddress(), account.customerPhone.Number, account.CompanyName });//TODO finish
+                    listView1.Items.Add(item);
+                }
+                
             }
         }
 

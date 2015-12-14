@@ -34,7 +34,7 @@
             this.columnHeaderCustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAccountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAccountBalance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxAccountCriteria = new System.Windows.Forms.ComboBox();
             this.groupBoxOptions = new System.Windows.Forms.GroupBox();
@@ -75,7 +75,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.listView1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxSearch, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonSearch, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.comboBoxAccountCriteria, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -113,20 +113,20 @@
             // columnHeaderAccountType
             // 
             this.columnHeaderAccountType.Text = "Account Type";
-            this.columnHeaderAccountType.Width = 85;
+            this.columnHeaderAccountType.Width = 94;
             // 
             // columnHeaderAccountBalance
             // 
             this.columnHeaderAccountBalance.Text = "Account Balance";
             this.columnHeaderAccountBalance.Width = 104;
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBoxSearch.Location = new System.Drawing.Point(3, 3);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(310, 20);
+            this.textBoxSearch.TabIndex = 1;
             // 
             // buttonSearch
             // 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderCustomerName;
         private System.Windows.Forms.ColumnHeader columnHeaderAccountType;
         private System.Windows.Forms.ColumnHeader columnHeaderAccountBalance;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.ComboBox comboBoxAccountCriteria;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.GroupBox groupBoxOptions;

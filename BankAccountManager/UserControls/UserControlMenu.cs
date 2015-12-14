@@ -18,7 +18,7 @@ namespace BankAccountManager.UserControls
         {
             InitializeComponent();
             comboBoxAccountCriteria.DataSource = new string[] {"Customer Name", "Account Type", "Account Balance", "Address", "Phone Number", "Company Name"};
-
+            
             FillView();
         }
 
@@ -35,28 +35,37 @@ namespace BankAccountManager.UserControls
                 {
                     default:
                     case 0:
-                        result = (account.CustomerName.GetFullName().ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        if (account.customerName != null) result = (account.CustomerName.GetFullName().ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 1:
-                        result = (account.Type.ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        if (account.Type != null) result = (account.Type.ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 2:
-                        result = (string.Format("{0:C}", account.AccountBalance).ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        result = (string.Format("{0:C}", account.AccountBalance).Replace(",", "").ToLower().Contains(textBoxSearch.Text.ToLower()));//No check for null because decimal is not nullable
                         break;
                     case 3:
-                        result = (account.customerAddress.GetFullAddress().ToLower().Contains(textBoxSearch.Text.ToLower()));
+                        if (account.customerAddress != null) result = (account.customerAddress.GetFullAddress().ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 4:
-                        result = (account.customerPhone.Number.ToLower().Contains(textBoxSearch.Text.ToLower().Replace(" ","")));
+                        if (account.customerPhone != null) result = (account.customerPhone.Number.ToLower().Contains(textBoxSearch.Text.ToLower().Replace(" ", "")));
                         break;
                     case 5:
-                        result = (account.CompanyName.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO handle for null
+                        if(account.CompanyName != null) result = (account.CompanyName.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO handle for null
                         break;
                 }
 
                 if (result || textBoxSearch.Text == "")
                 {
-                    ListViewItem item = new ListViewItem(new string[] { account.customerName.GetFullName(), account.Type, string.Format("{0:C}", account.AccountBalance), account.customerAddress.GetFullAddress(), account.customerPhone.Number, account.CompanyName });//TODO finish
+                    ListViewItem item = new ListViewItem(new string[] 
+                    { 
+                        (account.customerName != null)? account.customerName.GetFullName() : null, 
+                        (account.Type != null)? account.Type : null, 
+                        string.Format("{0:C}", account.AccountBalance), 
+                        (account.customerAddress != null)? account.customerAddress.GetFullAddress() : null, 
+                        (account.customerPhone != null)? account.customerPhone.Number : null, 
+                        (account.CompanyName != null)? account.CompanyName : null
+                    });//TODO finish
+
                     listView1.Items.Add(item);
                 }
                 

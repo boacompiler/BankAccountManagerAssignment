@@ -63,7 +63,8 @@ namespace BankAccountManager.UserControls
                         string.Format("{0:C}", account.AccountBalance), 
                         (account.customerAddress != null)? account.customerAddress.GetFullAddress() : null, 
                         (account.customerPhone != null)? account.customerPhone.Number : null, 
-                        (account.CompanyName != null)? account.CompanyName : null
+                        (account.CompanyName != null)? account.CompanyName : null,
+                        account.AcountNumber.ToString()
                     });//TODO finish
 
                     listView1.Items.Add(item);
@@ -80,6 +81,10 @@ namespace BankAccountManager.UserControls
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(""+listView1.SelectedItems[0].SubItems[1].Text);
+            MainForm.editControl.setAccount(0);//TODO testing
+            MainForm.editControl.refresh();
+            
             MainForm.ucm.DisplayControl(MainForm.editControl);
         }
     }

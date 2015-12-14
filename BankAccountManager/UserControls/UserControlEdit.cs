@@ -14,11 +14,15 @@ namespace BankAccountManager.UserControls
 {
     public partial class UserControlEdit : UserControl
     {
+        private int AccountNumber;
+        private Account account;
+
         public UserControlEdit()
         {
             InitializeComponent();
             comboBoxHonorific.DataSource = Enum.GetNames(typeof(Honorific));
             comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};
+
             
         }
 
@@ -48,8 +52,25 @@ namespace BankAccountManager.UserControls
             }
         }
 
+        public void setAccount(int AccountNumber)
+        {
+            this.AccountNumber = AccountNumber;
+            account = MainForm.myList[0]; //TODO testing
+        }
+
+        public void refresh()
+        {
+            comboBoxHonorific.SelectedItem = account.customerName.honorific.ToString();
+            textBoxFirstName.Text = account.customerName.FirstName;
+            textBoxSecondName.Text = account.customerName.SecondName;
+            textBoxPhone.Text = account.customerPhone.Number;
+            textBoxCompanyName.Text = (account.CompanyName != null)? account.CompanyName : null;
+        }
+
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            account.CompanyName = textBoxCompanyName.Text;
+            MainForm.myXML.Serialise();
             MainForm.ucm.DisplayControl(MainForm.menuControl);
         }
 

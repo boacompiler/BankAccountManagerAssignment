@@ -34,6 +34,9 @@
             this.columnHeaderCustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAccountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAccountBalance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxAccountCriteria = new System.Windows.Forms.ComboBox();
@@ -44,9 +47,6 @@
             this.buttonView = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBoxOptions.SuspendLayout();
@@ -98,6 +98,7 @@
             this.columnHeaderCompanyName});
             this.tableLayoutPanel3.SetColumnSpan(this.listView1, 3);
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(3, 32);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(518, 396);
@@ -119,6 +120,20 @@
             // 
             this.columnHeaderAccountBalance.Text = "Account Balance";
             this.columnHeaderAccountBalance.Width = 104;
+            // 
+            // columnHeaderAddress
+            // 
+            this.columnHeaderAddress.Text = "Address";
+            // 
+            // columnHeaderPhoneNumber
+            // 
+            this.columnHeaderPhoneNumber.Text = "Phone Number";
+            this.columnHeaderPhoneNumber.Width = 83;
+            // 
+            // columnHeaderCompanyName
+            // 
+            this.columnHeaderCompanyName.Text = "Company Name";
+            this.columnHeaderCompanyName.Width = 88;
             // 
             // textBoxSearch
             // 
@@ -225,20 +240,6 @@
             this.button6.TabIndex = 4;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // columnHeaderAddress
-            // 
-            this.columnHeaderAddress.Text = "Address";
-            // 
-            // columnHeaderPhoneNumber
-            // 
-            this.columnHeaderPhoneNumber.Text = "Phone Number";
-            this.columnHeaderPhoneNumber.Width = 83;
-            // 
-            // columnHeaderCompanyName
-            // 
-            this.columnHeaderCompanyName.Text = "Company Name";
-            this.columnHeaderCompanyName.Width = 88;
             // 
             // UserControlMenu
             // 

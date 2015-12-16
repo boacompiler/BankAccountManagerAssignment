@@ -19,7 +19,7 @@
     <AcountNumber>2643641</AcountNumber>
     <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
-    <CompanyName>Geraldine inc</CompanyName>
+    <CompanyName>poop inc</CompanyName>
     <TransactionFee>0</TransactionFee>
   </Account>
   <Account xsi:type="CurrentAccount">

@@ -70,7 +70,7 @@ namespace BankAccountManager.UserControls
         private void buttonSave_Click(object sender, EventArgs e)
         {
             account.CompanyName = textBoxCompanyName.Text;
-            MainForm.myXML.Serialise();
+            MainForm.myXML.Serialise(MainForm.myList);
             MainForm.ucm.DisplayControl(MainForm.menuControl);
         }
 

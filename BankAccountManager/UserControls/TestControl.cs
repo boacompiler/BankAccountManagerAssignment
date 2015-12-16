@@ -67,7 +67,7 @@ namespace BankAccountManager.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            myXML.Serialise();
+            myXML.Serialise(MainForm.myList);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace BankAccountManager.UserControls
             //MainForm.myXML.Serialise();
             XMLSeriliser<List<Account>> myaXML;
             myaXML = new XMLSeriliser<List<Account>>(MainForm.myList);
-            myaXML.Serialise();
+            myaXML.Serialise(MainForm.myList);
             MessageBox.Show("done " + MainForm.myList[0].customerName.GetFullName());
         }
 

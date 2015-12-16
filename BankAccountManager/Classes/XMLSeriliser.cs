@@ -48,10 +48,10 @@ namespace BankAccountManager.Classes
         }
 
         //Serialise the data from the class passed in the constructor to the xml file path stored in path
-        public void Serialise()
+        public void Serialise(T serialiseClass)
         {
             TextWriter WriteFileStream = new StreamWriter(path);           
-            SerializerObj.Serialize(WriteFileStream, serialisedClass);
+            SerializerObj.Serialize(WriteFileStream, serialiseClass);
             WriteFileStream.Close();
         }
 

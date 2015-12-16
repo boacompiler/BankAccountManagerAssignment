@@ -14,14 +14,14 @@ namespace BankAccountManager.UserControls
 {
     public partial class UserControlEdit : UserControl
     {
-        private int AccountNumber;
+        private int accountNumber;
         private Account account;
 
         public UserControlEdit()
         {
             InitializeComponent();
             comboBoxHonorific.DataSource = Enum.GetNames(typeof(Honorific));
-            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};
+            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};//TODO sort this out
 
             
         }
@@ -54,21 +54,50 @@ namespace BankAccountManager.UserControls
 
         public void setAccount(int AccountNumber)
         {
-            this.AccountNumber = AccountNumber;
-            account = MainForm.myList[0]; //TODO testing
+            this.accountNumber = AccountNumber;
+            account = MainForm.myList[AccountNumber]; //TODO testing
         }
 
         public void refresh()
         {
+            //Customer Details
             comboBoxHonorific.SelectedItem = account.customerName.honorific.ToString();
             textBoxFirstName.Text = account.customerName.FirstName;
             textBoxSecondName.Text = account.customerName.SecondName;
             textBoxPhone.Text = account.customerPhone.Number;
             textBoxCompanyName.Text = (account.CompanyName != null)? account.CompanyName : null;
+            //Address
+            textBoxBuilding.Text = account.customerAddress.Building;
+            textBoxRoad.Text = account.customerAddress.Road;
+            textBoxTown.Text = account.customerAddress.Town;
+            textBoxCounty.Text = account.customerAddress.County;
+            textBoxPostalCode.Text = account.customerAddress.PostalCode;
+            //Account Details
+            numericUpDownCurrencyBalance.Value = (decimal)account.AccountBalance;
+            comboBoxType.SelectedItem = account.Type;
+
+            switch (comboBoxType.SelectedIndex)
+            {
+                default:
+                case 0:
+                    //panelSavingsAccount.Hide();
+                    numericUpDownCurrencyInterestRate.Value =  ;
+                    break;
+                case 1:
+                    //panelCurrentAccount.Hide();
+                    break;
+                case 2:
+                    //panelCurrentAccount.Hide();
+                    break;
+            }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            //TODO enums suck and so do i, fix this
+            account.customerName.FirstName = textBoxFirstName.Text;
+            account.customerName.SecondName = textBoxSecondName.Text;
+            account.customerPhone.Number = textBoxPhone.Text;
             account.CompanyName = textBoxCompanyName.Text;
             MainForm.myXML.Serialise(MainForm.myList);
             MainForm.ucm.DisplayControl(MainForm.menuControl);

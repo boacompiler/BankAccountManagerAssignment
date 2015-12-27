@@ -17,6 +17,8 @@ namespace BankAccountManager.UserControls
         private int accountNumber;
         private Account account;
 
+        private CurrentAccount sAccount;
+
         public UserControlEdit()
         {
             InitializeComponent();
@@ -54,8 +56,11 @@ namespace BankAccountManager.UserControls
 
         public void setAccount(int AccountNumber)
         {
+            
             this.accountNumber = AccountNumber;
             account = MainForm.myList[AccountNumber]; //TODO testing
+            sAccount = (CurrentAccount)MainForm.myList[1]; //TODO THIS IS THE FIX WE NEEDED SHINY AND CHROME
+            MessageBox.Show(sAccount.OverdraftLimit  +"");
         }
 
         public void refresh()
@@ -81,7 +86,7 @@ namespace BankAccountManager.UserControls
                 default:
                 case 0:
                     //panelSavingsAccount.Hide();
-                    numericUpDownCurrencyInterestRate.Value =  ;
+                    //numericUpDownCurrencyInterestRate.Value =  ;//TODO test values
                     break;
                 case 1:
                     //panelCurrentAccount.Hide();
@@ -99,6 +104,11 @@ namespace BankAccountManager.UserControls
             account.customerName.SecondName = textBoxSecondName.Text;
             account.customerPhone.Number = textBoxPhone.Text;
             account.CompanyName = textBoxCompanyName.Text;
+            //TODO Address here
+            account.AccountBalance = (double)numericUpDownCurrencyBalance.Value;
+            //TODO type
+            
+
             MainForm.myXML.Serialise(MainForm.myList);
             MainForm.ucm.DisplayControl(MainForm.menuControl);
         }

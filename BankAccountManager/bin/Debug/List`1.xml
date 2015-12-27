@@ -3,8 +3,8 @@
   <Account xsi:type="FixedTermAccount">
     <customerName>
       <honorific>Mrs</honorific>
-      <FirstName>Terica</FirstName>
-      <SecondName>Ariane</SecondName>
+      <FirstName>Bob</FirstName>
+      <SecondName>Anderson</SecondName>
     </customerName>
     <customerAddress>
       <Building>b1</Building>
@@ -14,7 +14,7 @@
       <PostalCode>GU2</PostalCode>
     </customerAddress>
     <customerPhone>
-      <Number>12345678910</Number>
+      <Number>01483579982</Number>
     </customerPhone>
     <AcountNumber>2643641</AcountNumber>
     <Type>Fixed Term Account</Type>
@@ -63,6 +63,7 @@
     <AcountNumber>2389177</AcountNumber>
     <Type>Savings Account</Type>
     <AccountBalance>6059</AccountBalance>
+    <CompanyName />
     <InterestRate>0.54739127436065649</InterestRate>
   </Account>
   <Account xsi:type="FixedTermAccount">

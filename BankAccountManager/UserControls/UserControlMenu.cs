@@ -82,7 +82,7 @@ namespace BankAccountManager.UserControls
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(""+listView1.SelectedItems[0].SubItems[1].Text);
-            MainForm.editControl.setAccount(0);//TODO testing
+            MainForm.editControl.setAccount(2);//TODO testing
             MainForm.editControl.refresh();
             
             MainForm.ucm.DisplayControl(MainForm.editControl);

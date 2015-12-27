@@ -21,6 +21,8 @@ namespace BankAccountManager.Classes
         private double accountBalance;
         private string type;
 
+        //protected double interestRate;//TODO i really dont like this, but how do iaccces muh properties 
+
         public Account()
         {
             //serialisation requires parameterless constructors, so all constructor code that sets values has been moved to "SetInitialBalance", this requires an extra line of code for initialisation butprovides a much more robust data management system

@@ -70,7 +70,6 @@
             this.panelSavingsAccount = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.labelInterestRate = new System.Windows.Forms.Label();
-            this.numericUpDownCurrencyInterestRate = new BankAccountManager.CustomControls.NumericUpDownCurrency();
             this.panelCurrentAccount = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.labelOverdraftLimit = new System.Windows.Forms.Label();
@@ -81,6 +80,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelAccountNumber = new System.Windows.Forms.Label();
+            this.numericUpDownInterestRate = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxCustomerDetails.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -98,12 +98,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyTransactionFee)).BeginInit();
             this.panelSavingsAccount.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyInterestRate)).BeginInit();
             this.panelCurrentAccount.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftPenalty)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterestRate)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -568,7 +568,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Controls.Add(this.labelInterestRate, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.numericUpDownCurrencyInterestRate, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.numericUpDownInterestRate, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -585,14 +585,6 @@
             this.labelInterestRate.Size = new System.Drawing.Size(68, 13);
             this.labelInterestRate.TabIndex = 0;
             this.labelInterestRate.Text = "Interest Rate";
-            // 
-            // numericUpDownCurrencyInterestRate
-            // 
-            this.numericUpDownCurrencyInterestRate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDownCurrencyInterestRate.Location = new System.Drawing.Point(77, 3);
-            this.numericUpDownCurrencyInterestRate.Name = "numericUpDownCurrencyInterestRate";
-            this.numericUpDownCurrencyInterestRate.Size = new System.Drawing.Size(357, 20);
-            this.numericUpDownCurrencyInterestRate.TabIndex = 1;
             // 
             // panelCurrentAccount
             // 
@@ -724,6 +716,20 @@
             this.labelAccountNumber.TabIndex = 2;
             this.labelAccountNumber.Text = "Account Number:";
             // 
+            // numericUpDownInterestRate
+            // 
+            this.numericUpDownInterestRate.DecimalPlaces = 2;
+            this.numericUpDownInterestRate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownInterestRate.Location = new System.Drawing.Point(77, 3);
+            this.numericUpDownInterestRate.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownInterestRate.Name = "numericUpDownInterestRate";
+            this.numericUpDownInterestRate.Size = new System.Drawing.Size(357, 20);
+            this.numericUpDownInterestRate.TabIndex = 1;
+            // 
             // UserControlEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -763,7 +769,6 @@
             this.panelSavingsAccount.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyInterestRate)).EndInit();
             this.panelCurrentAccount.ResumeLayout(false);
             this.panelCurrentAccount.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -771,6 +776,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyOverdraftPenalty)).EndInit();
             this.tableLayoutPanel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterestRate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -819,7 +825,6 @@
         private System.Windows.Forms.Panel panelSavingsAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label labelInterestRate;
-        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyInterestRate;
         private System.Windows.Forms.Panel panelCurrentAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label labelOverdraftLimit;
@@ -830,5 +835,6 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelAccountNumber;
+        private System.Windows.Forms.NumericUpDown numericUpDownInterestRate;
     }
 }

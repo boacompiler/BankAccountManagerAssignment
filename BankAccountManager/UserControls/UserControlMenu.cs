@@ -22,6 +22,18 @@ namespace BankAccountManager.UserControls
             FillView();
         }
 
+        //We capture the enter key, allowing the user to press enter to search
+        //We cannot use the MainForm accept button because that is a wider scope than needed to be captured
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                buttonSearch.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         public void FillView()
         {
             listView1.Items.Clear();
@@ -41,7 +53,7 @@ namespace BankAccountManager.UserControls
                         if (account.Type != null) result = (account.Type.ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 2:
-                        result = (string.Format("{0:C}", account.AccountBalance).Replace(",", "").ToLower().Contains(textBoxSearch.Text.ToLower()));//No check for null because decimal is not nullable
+                        result = (string.Format("{0:C}", account.AccountBalance).Replace(",", "").ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                     case 3:
                         if (account.customerAddress != null) result = (account.customerAddress.GetFullAddress().ToLower().Contains(textBoxSearch.Text.ToLower()));
@@ -50,7 +62,7 @@ namespace BankAccountManager.UserControls
                         if (account.customerPhone != null) result = (account.customerPhone.Number.ToLower().Contains(textBoxSearch.Text.ToLower().Replace(" ", "")));
                         break;
                     case 5:
-                        if(account.CompanyName != null) result = (account.CompanyName.ToLower().Contains(textBoxSearch.Text.ToLower()));//TODO handle for null
+                        if(account.CompanyName != null) result = (account.CompanyName.ToLower().Contains(textBoxSearch.Text.ToLower()));
                         break;
                 }
 
@@ -85,7 +97,7 @@ namespace BankAccountManager.UserControls
                 string accNo = listView1.SelectedItems[0].SubItems[6].Text;
                 listView1.SelectedItems.Clear();
                 Account editAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
-                MainForm.editControl = new UserControlEdit(); //This is just a precaution, we don't want to accidentally edit the wrong account
+                MainForm.editControl = new UserControlEdit(); //This is just a precaution, we don't want to accidentally edit the wrong account, so we reinitialise the control 
                 MainForm.editControl.setAccount(editAccount);
                 MainForm.ucm.DisplayControl(MainForm.editControl);
             }

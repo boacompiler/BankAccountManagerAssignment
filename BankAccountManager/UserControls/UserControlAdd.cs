@@ -15,7 +15,7 @@ namespace BankAccountManager.UserControls
     public partial class UserControlAdd : UserControl
     {
 
-        private int accountNumber; //TODO Gen Account number IMPORTANT
+        private int accountNumber;
         //TODO Interest rate currrenty currency up down, shouldn't be
 
         private CurrentAccount cAccount;
@@ -31,6 +31,21 @@ namespace BankAccountManager.UserControls
             cAccount = new CurrentAccount();
             sAccount = new SavingsAccount();
             fAccount = new FixedTermAccount();
+
+            Random rand = new Random();
+            int randNo;
+
+            while (accountNumber == 0)
+            {
+                randNo = rand.Next(1000000000);
+                if (!MainForm.myList.Exists(x => x.AcountNumber == randNo))
+                {
+                    accountNumber = randNo;
+                }
+
+            }
+
+            labelAccountNumber.Text = "Account Number: " + accountNumber;
         }
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,6 +97,8 @@ namespace BankAccountManager.UserControls
                                                    (double)numericUpDownCurrencyOverdraftLimit.Value,
                                                    (double)numericUpDownCurrencyOverdraftPenalty.Value);
 
+                        cAccount.AcountNumber = accountNumber;
+
                         MainForm.myList.Add(cAccount);
                         break;
                     case 1:
@@ -97,7 +114,9 @@ namespace BankAccountManager.UserControls
                         sAccount.CompanyName = textBoxCompanyName.Text;
 
                         sAccount.SetInitialBalance((double)numericUpDownCurrencyBalance.Value,
-                                                   (double)numericUpDownCurrencyInterestRate.Value);
+                                                   (double)numericUpDownInterestRate.Value);
+
+                        sAccount.AcountNumber = accountNumber;
 
                         MainForm.myList.Add(sAccount);
                         break;
@@ -115,6 +134,8 @@ namespace BankAccountManager.UserControls
 
                         fAccount.SetInitialBalance((double)numericUpDownCurrencyBalance.Value,
                                                    (double)numericUpDownCurrencyTransactionFee.Value);
+
+                        fAccount.AcountNumber = accountNumber;
 
                         MainForm.myList.Add(fAccount);
                         break;

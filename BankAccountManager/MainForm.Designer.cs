@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(760, 638);
             this.MinimumSize = new System.Drawing.Size(480, 520);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Bank Account Manager";
             this.ResumeLayout(false);
 
         }

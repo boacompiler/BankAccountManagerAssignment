@@ -43,6 +43,8 @@ namespace BankAccountManager
             editControl = new UserControlEdit();
             addControl = new UserControlAdd();
 
+            
+
             ucm.DisplayControl(menuControl);
         }
     }

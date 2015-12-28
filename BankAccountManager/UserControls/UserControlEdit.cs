@@ -107,7 +107,7 @@ namespace BankAccountManager.UserControls
                     numericUpDownCurrencyOverdraftPenalty.Value = (decimal)cAccount.OverdraftPenalty;
                     break;
                 case "Savings Account":
-                    numericUpDownCurrencyInterestRate.Value = (decimal)sAccount.InterestRate;
+                    numericUpDownInterestRate.Value = (decimal)sAccount.InterestRate;
                     break;
                 case "Fixed Term Account":
                     numericUpDownCurrencyTransactionFee.Value = (decimal)fAccount.TransactionFee;
@@ -143,7 +143,7 @@ namespace BankAccountManager.UserControls
                         cAccount.OverdraftPenalty = (double)numericUpDownCurrencyOverdraftPenalty.Value;
                         break;
                     case "Savings Account":
-                        sAccount.InterestRate = (double)numericUpDownCurrencyInterestRate.Value;
+                        sAccount.InterestRate = (double)numericUpDownInterestRate.Value;
                         break;
                     case "Fixed Term Account":
                         fAccount.TransactionFee = (double)numericUpDownCurrencyTransactionFee.Value;

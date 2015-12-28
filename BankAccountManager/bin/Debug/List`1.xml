@@ -2,15 +2,15 @@
 <ArrayOfAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Account xsi:type="FixedTermAccount">
     <customerName>
-      <honorific>Mrs</honorific>
+      <honorific>Mr</honorific>
       <FirstName>Bob</FirstName>
       <SecondName>Anderson</SecondName>
     </customerName>
     <customerAddress>
-      <Building>b1</Building>
-      <Road>r1</Road>
-      <Town>t1</Town>
-      <County>c1</County>
+      <Building>b2</Building>
+      <Road>r2</Road>
+      <Town>t2</Town>
+      <County>c2</County>
       <PostalCode>GU2</PostalCode>
     </customerAddress>
     <customerPhone>
@@ -20,11 +20,11 @@
     <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>poop inc</CompanyName>
-    <TransactionFee>0</TransactionFee>
+    <TransactionFee>50</TransactionFee>
   </Account>
   <Account xsi:type="CurrentAccount">
     <customerName>
-      <honorific>Master</honorific>
+      <honorific>Dr</honorific>
       <FirstName>Ariane</FirstName>
       <SecondName>Christena</SecondName>
     </customerName>
@@ -41,6 +41,7 @@
     <AcountNumber>1015958</AcountNumber>
     <Type>Current Account</Type>
     <AccountBalance>2795</AccountBalance>
+    <CompanyName />
     <OverdraftLimit>89</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
   </Account>
@@ -51,20 +52,20 @@
       <SecondName>Edmond</SecondName>
     </customerName>
     <customerAddress>
-      <Building>b1</Building>
-      <Road>r1</Road>
-      <Town>t1</Town>
-      <County>c1</County>
-      <PostalCode>GU2</PostalCode>
+      <Building>61</Building>
+      <Road>Bogan Road</Road>
+      <Town>Hadley</Town>
+      <County>Hampshirw</County>
+      <PostalCode>GU3 7DC</PostalCode>
     </customerAddress>
     <customerPhone>
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>2389177</AcountNumber>
     <Type>Savings Account</Type>
-    <AccountBalance>6059</AccountBalance>
+    <AccountBalance>60000</AccountBalance>
     <CompanyName />
-    <InterestRate>0.54739127436065649</InterestRate>
+    <InterestRate>0.22</InterestRate>
   </Account>
   <Account xsi:type="FixedTermAccount">
     <customerName>
@@ -133,7 +134,7 @@
   </Account>
   <Account xsi:type="CurrentAccount">
     <customerName>
-      <honorific>Ms</honorific>
+      <honorific>Mr</honorific>
       <FirstName>Denae</FirstName>
       <SecondName>Donovan</SecondName>
     </customerName>
@@ -150,6 +151,7 @@
     <AcountNumber>1238201</AcountNumber>
     <Type>Current Account</Type>
     <AccountBalance>8623</AccountBalance>
+    <CompanyName />
     <OverdraftLimit>93</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
   </Account>

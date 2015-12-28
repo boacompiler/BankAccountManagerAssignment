@@ -22,7 +22,7 @@ namespace BankAccountManager.UserControls
             FillView();
         }
 
-        void FillView()
+        public void FillView()
         {
             listView1.Items.Clear();
 
@@ -82,9 +82,9 @@ namespace BankAccountManager.UserControls
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(""+listView1.SelectedItems[0].SubItems[1].Text);
-            MainForm.editControl.setAccount(2);//TODO testing
-            MainForm.editControl.refresh();
-            
+            string accNo = listView1.SelectedItems[0].SubItems[6].Text;
+            Account editAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
+            MainForm.editControl.setAccount(editAccount);//TODO testing
             MainForm.ucm.DisplayControl(MainForm.editControl);
         }
     }

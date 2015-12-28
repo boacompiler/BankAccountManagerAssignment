@@ -14,17 +14,18 @@ namespace BankAccountManager.UserControls
 {
     public partial class UserControlEdit : UserControl
     {
-        private int accountNumber;
         private Account account;
 
-        private CurrentAccount sAccount;
+        private CurrentAccount cAccount;
+        private SavingsAccount sAccount;
+        private FixedTermAccount fAccount;
 
         public UserControlEdit()
         {
             InitializeComponent();
             comboBoxHonorific.DataSource = Enum.GetNames(typeof(Honorific));
             comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};//TODO sort this out
-
+            
             
         }
 
@@ -54,13 +55,30 @@ namespace BankAccountManager.UserControls
             }
         }
 
-        public void setAccount(int AccountNumber)
+        public void setAccount(Account editAccount)
         {
             
-            this.accountNumber = AccountNumber;
-            account = MainForm.myList[AccountNumber]; //TODO testing
-            sAccount = (CurrentAccount)MainForm.myList[1]; //TODO THIS IS THE FIX WE NEEDED SHINY AND CHROME
-            MessageBox.Show(sAccount.OverdraftLimit  +"");
+            //this.accountNumber = AccountNumber;
+            account = editAccount; //TODO testing
+
+            switch (account.Type)
+            {
+                default:
+                case "Current Account":
+                    cAccount = (CurrentAccount)account;
+                    break;
+                case "Savings Account":
+                    sAccount = (SavingsAccount)account;
+                    break;
+                case "Fixed Term Account":
+                    fAccount = (FixedTermAccount)account;
+                    break;
+            }
+
+            refresh();
+
+            //sAccount = (SavingsAccount)MainForm.myList[AccountNumber]; //TODO THIS IS THE FIX WE NEEDED SHINY AND CHROME
+            
         }
 
         public void refresh()
@@ -80,37 +98,59 @@ namespace BankAccountManager.UserControls
             //Account Details
             numericUpDownCurrencyBalance.Value = (decimal)account.AccountBalance;
             comboBoxType.SelectedItem = account.Type;
-
-            switch (comboBoxType.SelectedIndex)
+            comboBoxType.Enabled = false;
+            switch (account.Type)
             {
                 default:
-                case 0:
-                    //panelSavingsAccount.Hide();
-                    //numericUpDownCurrencyInterestRate.Value =  ;//TODO test values
+                case "Current Account":
+                    numericUpDownCurrencyOverdraftLimit.Value = (decimal)cAccount.OverdraftLimit;
+                    numericUpDownCurrencyOverdraftPenalty.Value = (decimal)cAccount.OverdraftPenalty;
                     break;
-                case 1:
-                    //panelCurrentAccount.Hide();
+                case "Savings Account":
+                    numericUpDownCurrencyInterestRate.Value = (decimal)sAccount.InterestRate;
                     break;
-                case 2:
-                    //panelCurrentAccount.Hide();
+                case "Fixed Term Account":
+                    numericUpDownCurrencyTransactionFee.Value = (decimal)fAccount.TransactionFee;
                     break;
             }
+            labelAccountNumber.Text = "Account Number: "+account.AcountNumber;
+            
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            //TODO enums suck and so do i, fix this
+            //Customer Details
+            account.customerName.honorific = (Honorific)Enum.Parse(typeof(Honorific),comboBoxHonorific.SelectedValue.ToString(),true);
             account.customerName.FirstName = textBoxFirstName.Text;
             account.customerName.SecondName = textBoxSecondName.Text;
             account.customerPhone.Number = textBoxPhone.Text;
             account.CompanyName = textBoxCompanyName.Text;
-            //TODO Address here
+            //Address
+            account.customerAddress.Building = textBoxBuilding.Text;
+            account.customerAddress.Road = textBoxRoad.Text;
+            account.customerAddress.Town = textBoxTown.Text;
+            account.customerAddress.County = textBoxCounty.Text;
+            account.CustomerAddress.PostalCode = textBoxPostalCode.Text;
+            //Account Details
             account.AccountBalance = (double)numericUpDownCurrencyBalance.Value;
-            //TODO type
-            
+            switch (account.Type)
+            {
+                default:
+                case "Current Account":
+                    cAccount.OverdraftLimit = (double)numericUpDownCurrencyOverdraftLimit.Value;
+                    cAccount.OverdraftPenalty = (double)numericUpDownCurrencyOverdraftPenalty.Value;
+                    break;
+                case "Savings Account":
+                    sAccount.InterestRate = (double)numericUpDownCurrencyInterestRate.Value;
+                    break;
+                case "Fixed Term Account":
+                    fAccount.TransactionFee = (double)numericUpDownCurrencyTransactionFee.Value;
+                    break;
+            }
 
             MainForm.myXML.Serialise(MainForm.myList);
             MainForm.ucm.DisplayControl(MainForm.menuControl);
+            MainForm.menuControl.FillView();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

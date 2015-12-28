@@ -80,6 +80,7 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.labelAccountNumber = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxCustomerDetails.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -223,7 +224,6 @@
             // 
             // labelFirstName
             // 
-            this.labelFirstName.AutoSize = true;
             this.labelFirstName.Location = new System.Drawing.Point(150, 0);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(26, 13);
@@ -232,7 +232,6 @@
             // 
             // labelSecondName
             // 
-            this.labelSecondName.AutoSize = true;
             this.labelSecondName.Location = new System.Drawing.Point(322, 0);
             this.labelSecondName.Name = "labelSecondName";
             this.labelSecondName.Size = new System.Drawing.Size(44, 13);
@@ -686,6 +685,7 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel10.Controls.Add(this.buttonCancel, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.buttonSave, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.labelAccountNumber, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 808);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -715,6 +715,14 @@
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // labelAccountNumber
+            // 
+            this.labelAccountNumber.Location = new System.Drawing.Point(3, 0);
+            this.labelAccountNumber.Name = "labelAccountNumber";
+            this.labelAccountNumber.Size = new System.Drawing.Size(342, 23);
+            this.labelAccountNumber.TabIndex = 2;
+            this.labelAccountNumber.Text = "Account Number:";
             // 
             // UserControlEdit
             // 
@@ -821,5 +829,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Label labelAccountNumber;
     }
 }

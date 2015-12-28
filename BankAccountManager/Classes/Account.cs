@@ -107,7 +107,7 @@ namespace BankAccountManager.Classes
                 type = value;
             }
         }
-        //TODO this is sorta redundant due to specifications but much better than specifications...
+        //TODO validation?
         public double AccountBalance
         {
             get
@@ -150,11 +150,6 @@ namespace BankAccountManager.Classes
             {
                 throw new System.ArgumentException("Debit amount exceeds account balance");
             }
-        }
-        //TODO kinda redundant and more of a java structure than something thats used in c#, but this is directly asked for in the specs (because specs are for c++ cough cough)
-        public double GetBalance()
-        {
-            return accountBalance;
         }
     }
 }

@@ -17,6 +17,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid building");
+                }
                 building = value;
             }
         }
@@ -30,6 +34,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid road");
+                }
                 road = value;
             }
         }
@@ -43,6 +51,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid town");
+                }
                 town = value;
             }
         }
@@ -56,6 +68,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid county");
+                }
                 county = value;
             }
         }
@@ -69,6 +85,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid postal code");
+                }
                 postalCode = value;
             }
         }
@@ -76,11 +96,11 @@
         //TODO add validation
         public void SetFullAddress(string building, string road, string town, string county, string postalCode)
         {
-            this.building = building;
-            this.road = road;
-            this.town = town;
-            this.county = county;
-            this.postalCode = postalCode;
+            Building = building;
+            Road = road;
+            Town = town;
+            County = county;
+            PostalCode = postalCode;
         }
 
         public string GetFullAddress()

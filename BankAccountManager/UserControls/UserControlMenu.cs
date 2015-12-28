@@ -76,16 +76,31 @@ namespace BankAccountManager.UserControls
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             FillView();
-            //MessageBox.Show(MainForm.myList[0].customerName.GetFullName());
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(""+listView1.SelectedItems[0].SubItems[1].Text);
-            string accNo = listView1.SelectedItems[0].SubItems[6].Text;
-            Account editAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
-            MainForm.editControl.setAccount(editAccount);//TODO testing
-            MainForm.ucm.DisplayControl(MainForm.editControl);
+            try
+            {
+                string accNo = listView1.SelectedItems[0].SubItems[6].Text;
+                listView1.SelectedItems.Clear();
+                Account editAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
+                MainForm.editControl = new UserControlEdit(); //This is just a precaution, we don't want to accidentally edit the wrong account
+                MainForm.editControl.setAccount(editAccount);
+                MainForm.ucm.DisplayControl(MainForm.editControl);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Select an account to edit","Error");
+            }
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            MainForm.addControl = new UserControlAdd();//This is just a precaution, we don't want to accidentally addd an existing account
+            MainForm.ucm.DisplayControl(MainForm.addControl);
         }
     }
 }

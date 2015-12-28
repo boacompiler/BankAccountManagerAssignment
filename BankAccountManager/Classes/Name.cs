@@ -28,6 +28,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid first name");
+                }
                 firstName = value;
             }
         }
@@ -41,6 +45,10 @@
 
             set
             {
+                if (value.Length < 1)
+                {
+                    throw new System.ArgumentException("Invalid second name");
+                }
                 secondName = value;
             }
         }
@@ -61,9 +69,9 @@
         //Removed constructor for serialistation compatibility
         public void SetFullName(string firstName, string secondName, Honorific honorific)
         {
-            this.firstName = firstName;
-            this.secondName = secondName;
-            this.honorific = honorific;
+            FirstName = firstName;
+            SecondName = secondName;
+            Honorific = honorific;
         }
 
         public string GetFullName()

@@ -119,38 +119,46 @@ namespace BankAccountManager.UserControls
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            //Customer Details
-            account.customerName.honorific = (Honorific)Enum.Parse(typeof(Honorific),comboBoxHonorific.SelectedValue.ToString(),true);
-            account.customerName.FirstName = textBoxFirstName.Text;
-            account.customerName.SecondName = textBoxSecondName.Text;
-            account.customerPhone.Number = textBoxPhone.Text;
-            account.CompanyName = textBoxCompanyName.Text;
-            //Address
-            account.customerAddress.Building = textBoxBuilding.Text;
-            account.customerAddress.Road = textBoxRoad.Text;
-            account.customerAddress.Town = textBoxTown.Text;
-            account.customerAddress.County = textBoxCounty.Text;
-            account.CustomerAddress.PostalCode = textBoxPostalCode.Text;
-            //Account Details
-            account.AccountBalance = (double)numericUpDownCurrencyBalance.Value;
-            switch (account.Type)
+            try
             {
-                default:
-                case "Current Account":
-                    cAccount.OverdraftLimit = (double)numericUpDownCurrencyOverdraftLimit.Value;
-                    cAccount.OverdraftPenalty = (double)numericUpDownCurrencyOverdraftPenalty.Value;
-                    break;
-                case "Savings Account":
-                    sAccount.InterestRate = (double)numericUpDownCurrencyInterestRate.Value;
-                    break;
-                case "Fixed Term Account":
-                    fAccount.TransactionFee = (double)numericUpDownCurrencyTransactionFee.Value;
-                    break;
-            }
+                //Customer Details
+                account.customerName.honorific = (Honorific)Enum.Parse(typeof(Honorific), comboBoxHonorific.SelectedValue.ToString(), true);
+                account.customerName.FirstName = textBoxFirstName.Text;
+                account.customerName.SecondName = textBoxSecondName.Text;
+                account.customerPhone.Number = textBoxPhone.Text;
+                account.CompanyName = textBoxCompanyName.Text;
+                //Address
+                account.customerAddress.Building = textBoxBuilding.Text;
+                account.customerAddress.Road = textBoxRoad.Text;
+                account.customerAddress.Town = textBoxTown.Text;
+                account.customerAddress.County = textBoxCounty.Text;
+                account.CustomerAddress.PostalCode = textBoxPostalCode.Text;
+                //Account Details
+                account.AccountBalance = (double)numericUpDownCurrencyBalance.Value;
+                switch (account.Type)
+                {
+                    default:
+                    case "Current Account":
+                        cAccount.OverdraftLimit = (double)numericUpDownCurrencyOverdraftLimit.Value;
+                        cAccount.OverdraftPenalty = (double)numericUpDownCurrencyOverdraftPenalty.Value;
+                        break;
+                    case "Savings Account":
+                        sAccount.InterestRate = (double)numericUpDownCurrencyInterestRate.Value;
+                        break;
+                    case "Fixed Term Account":
+                        fAccount.TransactionFee = (double)numericUpDownCurrencyTransactionFee.Value;
+                        break;
+                }
 
-            MainForm.myXML.Serialise(MainForm.myList);
-            MainForm.ucm.DisplayControl(MainForm.menuControl);
-            MainForm.menuControl.FillView();
+                MainForm.myXML.Serialise(MainForm.myList);
+                MainForm.menuControl.FillView();
+                MainForm.ucm.DisplayControl(MainForm.menuControl);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"Error");
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

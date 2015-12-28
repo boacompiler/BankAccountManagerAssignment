@@ -71,6 +71,12 @@
     <Compile Include="UserControls\TestControl.Designer.cs">
       <DependentUpon>TestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlAdd.Designer.cs">
+      <DependentUpon>UserControlAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\TestControl.resx">
       <DependentUpon>TestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlAdd.resx">
+      <DependentUpon>UserControlAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlEdit.resx">
       <DependentUpon>UserControlEdit.cs</DependentUpon>

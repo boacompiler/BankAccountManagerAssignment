@@ -27,6 +27,7 @@
                 transactionFee = value;
             }
         }
+
         //TODO i don't understand the specifications for this method
         //public bool IsFeeCharged()
         //{

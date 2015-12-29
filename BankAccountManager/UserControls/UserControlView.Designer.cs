@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBoxFunds = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelFunds = new System.Windows.Forms.Label();
+            this.buttonDeposit = new System.Windows.Forms.Button();
+            this.buttonWithdraw = new System.Windows.Forms.Button();
             this.groupBoxCustomerDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxCustomerName = new System.Windows.Forms.GroupBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.groupBoxCustomerAddress = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelBuilding = new System.Windows.Forms.Label();
@@ -39,9 +45,16 @@
             this.labelTown = new System.Windows.Forms.Label();
             this.labelCounty = new System.Windows.Forms.Label();
             this.labelPostalCode = new System.Windows.Forms.Label();
+            this.labelBuildingText = new System.Windows.Forms.Label();
+            this.labelRoadText = new System.Windows.Forms.Label();
+            this.labelTownText = new System.Windows.Forms.Label();
+            this.labelCountyText = new System.Windows.Forms.Label();
+            this.labelPostalCodeText = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
+            this.labelPhoneText = new System.Windows.Forms.Label();
+            this.labelCompanyText = new System.Windows.Forms.Label();
             this.groupBoxAccountDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.labelBalance = new System.Windows.Forms.Label();
@@ -51,30 +64,28 @@
             this.panelFixedTermAccount = new System.Windows.Forms.Panel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.labelTransactionFee = new System.Windows.Forms.Label();
+            this.labelTransactionFeeText = new System.Windows.Forms.Label();
             this.panelSavingsAccount = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.labelInterestRate = new System.Windows.Forms.Label();
+            this.labelInterestRateText = new System.Windows.Forms.Label();
             this.panelCurrentAccount = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.labelOverdraftLimit = new System.Windows.Forms.Label();
             this.labelOverdraftPenalty = new System.Windows.Forms.Label();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.labelAccountNumber = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelPhoneText = new System.Windows.Forms.Label();
-            this.labelCompanyText = new System.Windows.Forms.Label();
-            this.labelBuildingText = new System.Windows.Forms.Label();
-            this.labelRoadText = new System.Windows.Forms.Label();
-            this.labelTownText = new System.Windows.Forms.Label();
-            this.labelCountyText = new System.Windows.Forms.Label();
-            this.labelPostalCodeText = new System.Windows.Forms.Label();
-            this.labelBalanceText = new System.Windows.Forms.Label();
             this.labelOverdraftLimitText = new System.Windows.Forms.Label();
             this.labelOverdraftPenaltyText = new System.Windows.Forms.Label();
-            this.labelInterestRateText = new System.Windows.Forms.Label();
-            this.labelTransactionFeeText = new System.Windows.Forms.Label();
+            this.labelBalanceText = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonReturn = new System.Windows.Forms.Button();
+            this.labelAccountNumber = new System.Windows.Forms.Label();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.numericUpDownCurrencyFunds = new BankAccountManager.CustomControls.NumericUpDownCurrency();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBoxFunds.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.groupBoxCustomerDetails.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBoxCustomerName.SuspendLayout();
@@ -91,24 +102,93 @@
             this.panelCurrentAccount.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyFunds)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxFunds, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.groupBoxCustomerDetails, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBoxAccountDetails, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel10, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel10, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 840);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // groupBoxFunds
+            // 
+            this.groupBoxFunds.AutoSize = true;
+            this.groupBoxFunds.Controls.Add(this.tableLayoutPanel3);
+            this.groupBoxFunds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxFunds.Location = new System.Drawing.Point(3, 715);
+            this.groupBoxFunds.Name = "groupBoxFunds";
+            this.groupBoxFunds.Size = new System.Drawing.Size(510, 87);
+            this.groupBoxFunds.TabIndex = 4;
+            this.groupBoxFunds.TabStop = false;
+            this.groupBoxFunds.Text = "Funds";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.labelFunds, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonDeposit, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.buttonWithdraw, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.numericUpDownCurrencyFunds, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(504, 68);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // labelFunds
+            // 
+            this.labelFunds.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.labelFunds, 2);
+            this.labelFunds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelFunds.Location = new System.Drawing.Point(3, 0);
+            this.labelFunds.Name = "labelFunds";
+            this.labelFunds.Size = new System.Drawing.Size(498, 13);
+            this.labelFunds.TabIndex = 0;
+            this.labelFunds.Text = "label2";
+            // 
+            // buttonDeposit
+            // 
+            this.buttonDeposit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDeposit.Location = new System.Drawing.Point(3, 42);
+            this.buttonDeposit.Name = "buttonDeposit";
+            this.buttonDeposit.Size = new System.Drawing.Size(246, 23);
+            this.buttonDeposit.TabIndex = 2;
+            this.buttonDeposit.Text = "Deposit";
+            this.buttonDeposit.UseVisualStyleBackColor = true;
+            this.buttonDeposit.Click += new System.EventHandler(this.buttonDeposit_Click);
+            // 
+            // buttonWithdraw
+            // 
+            this.buttonWithdraw.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonWithdraw.Location = new System.Drawing.Point(255, 42);
+            this.buttonWithdraw.Name = "buttonWithdraw";
+            this.buttonWithdraw.Size = new System.Drawing.Size(246, 23);
+            this.buttonWithdraw.TabIndex = 3;
+            this.buttonWithdraw.Text = "Withdraw";
+            this.buttonWithdraw.UseVisualStyleBackColor = true;
+            this.buttonWithdraw.Click += new System.EventHandler(this.buttonWithdraw_Click);
             // 
             // groupBoxCustomerDetails
             // 
@@ -151,6 +231,16 @@
             this.groupBoxCustomerName.TabIndex = 0;
             this.groupBoxCustomerName.TabStop = false;
             this.groupBoxCustomerName.Text = "Customer Name";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelName.Location = new System.Drawing.Point(3, 16);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(82, 13);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "Customer Name";
             // 
             // groupBoxCustomerAddress
             // 
@@ -237,6 +327,51 @@
             this.labelPostalCode.TabIndex = 9;
             this.labelPostalCode.Text = "PostalCode";
             // 
+            // labelBuildingText
+            // 
+            this.labelBuildingText.AutoSize = true;
+            this.labelBuildingText.Location = new System.Drawing.Point(70, 0);
+            this.labelBuildingText.Name = "labelBuildingText";
+            this.labelBuildingText.Size = new System.Drawing.Size(35, 13);
+            this.labelBuildingText.TabIndex = 10;
+            this.labelBuildingText.Text = "label2";
+            // 
+            // labelRoadText
+            // 
+            this.labelRoadText.AutoSize = true;
+            this.labelRoadText.Location = new System.Drawing.Point(70, 13);
+            this.labelRoadText.Name = "labelRoadText";
+            this.labelRoadText.Size = new System.Drawing.Size(35, 13);
+            this.labelRoadText.TabIndex = 11;
+            this.labelRoadText.Text = "label3";
+            // 
+            // labelTownText
+            // 
+            this.labelTownText.AutoSize = true;
+            this.labelTownText.Location = new System.Drawing.Point(70, 26);
+            this.labelTownText.Name = "labelTownText";
+            this.labelTownText.Size = new System.Drawing.Size(35, 13);
+            this.labelTownText.TabIndex = 12;
+            this.labelTownText.Text = "label4";
+            // 
+            // labelCountyText
+            // 
+            this.labelCountyText.AutoSize = true;
+            this.labelCountyText.Location = new System.Drawing.Point(70, 39);
+            this.labelCountyText.Name = "labelCountyText";
+            this.labelCountyText.Size = new System.Drawing.Size(35, 13);
+            this.labelCountyText.TabIndex = 13;
+            this.labelCountyText.Text = "label5";
+            // 
+            // labelPostalCodeText
+            // 
+            this.labelPostalCodeText.AutoSize = true;
+            this.labelPostalCodeText.Location = new System.Drawing.Point(70, 52);
+            this.labelPostalCodeText.Name = "labelPostalCodeText";
+            this.labelPostalCodeText.Size = new System.Drawing.Size(35, 13);
+            this.labelPostalCodeText.TabIndex = 14;
+            this.labelPostalCodeText.Text = "label6";
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.AutoSize = true;
@@ -274,6 +409,26 @@
             this.labelCompanyName.TabIndex = 2;
             this.labelCompanyName.Text = "Company Name";
             // 
+            // labelPhoneText
+            // 
+            this.labelPhoneText.AutoSize = true;
+            this.labelPhoneText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPhoneText.Location = new System.Drawing.Point(91, 0);
+            this.labelPhoneText.Name = "labelPhoneText";
+            this.labelPhoneText.Size = new System.Drawing.Size(404, 13);
+            this.labelPhoneText.TabIndex = 3;
+            this.labelPhoneText.Text = "label2";
+            // 
+            // labelCompanyText
+            // 
+            this.labelCompanyText.AutoSize = true;
+            this.labelCompanyText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCompanyText.Location = new System.Drawing.Point(91, 13);
+            this.labelCompanyText.Name = "labelCompanyText";
+            this.labelCompanyText.Size = new System.Drawing.Size(404, 13);
+            this.labelCompanyText.TabIndex = 4;
+            this.labelCompanyText.Text = "label3";
+            // 
             // groupBoxAccountDetails
             // 
             this.groupBoxAccountDetails.AutoSize = true;
@@ -281,7 +436,7 @@
             this.groupBoxAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxAccountDetails.Location = new System.Drawing.Point(3, 188);
             this.groupBoxAccountDetails.Name = "groupBoxAccountDetails";
-            this.groupBoxAccountDetails.Size = new System.Drawing.Size(510, 614);
+            this.groupBoxAccountDetails.Size = new System.Drawing.Size(510, 521);
             this.groupBoxAccountDetails.TabIndex = 1;
             this.groupBoxAccountDetails.TabStop = false;
             this.groupBoxAccountDetails.Text = "Account Details";
@@ -305,7 +460,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(504, 595);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(504, 502);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // labelBalance
@@ -347,7 +502,7 @@
             this.panelAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAccountDetails.Location = new System.Drawing.Point(3, 43);
             this.panelAccountDetails.Name = "panelAccountDetails";
-            this.panelAccountDetails.Size = new System.Drawing.Size(498, 549);
+            this.panelAccountDetails.Size = new System.Drawing.Size(498, 456);
             this.panelAccountDetails.TabIndex = 3;
             // 
             // panelFixedTermAccount
@@ -384,6 +539,16 @@
             this.labelTransactionFee.TabIndex = 1;
             this.labelTransactionFee.Text = "Transaction Fee";
             // 
+            // labelTransactionFeeText
+            // 
+            this.labelTransactionFeeText.AutoSize = true;
+            this.labelTransactionFeeText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTransactionFeeText.Location = new System.Drawing.Point(93, 0);
+            this.labelTransactionFeeText.Name = "labelTransactionFeeText";
+            this.labelTransactionFeeText.Size = new System.Drawing.Size(341, 101);
+            this.labelTransactionFeeText.TabIndex = 2;
+            this.labelTransactionFeeText.Text = "label5";
+            // 
             // panelSavingsAccount
             // 
             this.panelSavingsAccount.AutoSize = true;
@@ -401,10 +566,12 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Controls.Add(this.labelInterestRate, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.labelInterestRateText, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.Size = new System.Drawing.Size(437, 101);
             this.tableLayoutPanel8.TabIndex = 0;
@@ -417,6 +584,16 @@
             this.labelInterestRate.Size = new System.Drawing.Size(68, 13);
             this.labelInterestRate.TabIndex = 0;
             this.labelInterestRate.Text = "Interest Rate";
+            // 
+            // labelInterestRateText
+            // 
+            this.labelInterestRateText.AutoSize = true;
+            this.labelInterestRateText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelInterestRateText.Location = new System.Drawing.Point(77, 0);
+            this.labelInterestRateText.Name = "labelInterestRateText";
+            this.labelInterestRateText.Size = new System.Drawing.Size(357, 13);
+            this.labelInterestRateText.TabIndex = 1;
+            this.labelInterestRateText.Text = "label4";
             // 
             // panelCurrentAccount
             // 
@@ -464,127 +641,6 @@
             this.labelOverdraftPenalty.TabIndex = 1;
             this.labelOverdraftPenalty.Text = "Overdraft Penalty";
             // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.AutoSize = true;
-            this.tableLayoutPanel10.ColumnCount = 3;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel10.Controls.Add(this.buttonCancel, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.labelAccountNumber, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 808);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(510, 29);
-            this.tableLayoutPanel10.TabIndex = 2;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonCancel.Location = new System.Drawing.Point(432, 3);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // labelAccountNumber
-            // 
-            this.labelAccountNumber.Location = new System.Drawing.Point(3, 0);
-            this.labelAccountNumber.Name = "labelAccountNumber";
-            this.labelAccountNumber.Size = new System.Drawing.Size(342, 23);
-            this.labelAccountNumber.TabIndex = 2;
-            this.labelAccountNumber.Text = "Account Number:";
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelName.Location = new System.Drawing.Point(3, 16);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(82, 13);
-            this.labelName.TabIndex = 0;
-            this.labelName.Text = "Customer Name";
-            // 
-            // labelPhoneText
-            // 
-            this.labelPhoneText.AutoSize = true;
-            this.labelPhoneText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPhoneText.Location = new System.Drawing.Point(91, 0);
-            this.labelPhoneText.Name = "labelPhoneText";
-            this.labelPhoneText.Size = new System.Drawing.Size(404, 13);
-            this.labelPhoneText.TabIndex = 3;
-            this.labelPhoneText.Text = "label2";
-            // 
-            // labelCompanyText
-            // 
-            this.labelCompanyText.AutoSize = true;
-            this.labelCompanyText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompanyText.Location = new System.Drawing.Point(91, 13);
-            this.labelCompanyText.Name = "labelCompanyText";
-            this.labelCompanyText.Size = new System.Drawing.Size(404, 13);
-            this.labelCompanyText.TabIndex = 4;
-            this.labelCompanyText.Text = "label3";
-            // 
-            // labelBuildingText
-            // 
-            this.labelBuildingText.AutoSize = true;
-            this.labelBuildingText.Location = new System.Drawing.Point(70, 0);
-            this.labelBuildingText.Name = "labelBuildingText";
-            this.labelBuildingText.Size = new System.Drawing.Size(35, 13);
-            this.labelBuildingText.TabIndex = 10;
-            this.labelBuildingText.Text = "label2";
-            // 
-            // labelRoadText
-            // 
-            this.labelRoadText.AutoSize = true;
-            this.labelRoadText.Location = new System.Drawing.Point(70, 13);
-            this.labelRoadText.Name = "labelRoadText";
-            this.labelRoadText.Size = new System.Drawing.Size(35, 13);
-            this.labelRoadText.TabIndex = 11;
-            this.labelRoadText.Text = "label3";
-            // 
-            // labelTownText
-            // 
-            this.labelTownText.AutoSize = true;
-            this.labelTownText.Location = new System.Drawing.Point(70, 26);
-            this.labelTownText.Name = "labelTownText";
-            this.labelTownText.Size = new System.Drawing.Size(35, 13);
-            this.labelTownText.TabIndex = 12;
-            this.labelTownText.Text = "label4";
-            // 
-            // labelCountyText
-            // 
-            this.labelCountyText.AutoSize = true;
-            this.labelCountyText.Location = new System.Drawing.Point(70, 39);
-            this.labelCountyText.Name = "labelCountyText";
-            this.labelCountyText.Size = new System.Drawing.Size(35, 13);
-            this.labelCountyText.TabIndex = 13;
-            this.labelCountyText.Text = "label5";
-            // 
-            // labelPostalCodeText
-            // 
-            this.labelPostalCodeText.AutoSize = true;
-            this.labelPostalCodeText.Location = new System.Drawing.Point(70, 52);
-            this.labelPostalCodeText.Name = "labelPostalCodeText";
-            this.labelPostalCodeText.Size = new System.Drawing.Size(35, 13);
-            this.labelPostalCodeText.TabIndex = 14;
-            this.labelPostalCodeText.Text = "label6";
-            // 
-            // labelBalanceText
-            // 
-            this.labelBalanceText.AutoSize = true;
-            this.labelBalanceText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelBalanceText.Location = new System.Drawing.Point(55, 0);
-            this.labelBalanceText.Name = "labelBalanceText";
-            this.labelBalanceText.Size = new System.Drawing.Size(446, 13);
-            this.labelBalanceText.TabIndex = 4;
-            this.labelBalanceText.Text = "label2";
-            // 
             // labelOverdraftLimitText
             // 
             this.labelOverdraftLimitText.AutoSize = true;
@@ -605,25 +661,109 @@
             this.labelOverdraftPenaltyText.TabIndex = 3;
             this.labelOverdraftPenaltyText.Text = "label3";
             // 
-            // labelInterestRateText
+            // labelBalanceText
             // 
-            this.labelInterestRateText.AutoSize = true;
-            this.labelInterestRateText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelInterestRateText.Location = new System.Drawing.Point(77, 0);
-            this.labelInterestRateText.Name = "labelInterestRateText";
-            this.labelInterestRateText.Size = new System.Drawing.Size(357, 101);
-            this.labelInterestRateText.TabIndex = 1;
-            this.labelInterestRateText.Text = "label4";
+            this.labelBalanceText.AutoSize = true;
+            this.labelBalanceText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelBalanceText.Location = new System.Drawing.Point(55, 0);
+            this.labelBalanceText.Name = "labelBalanceText";
+            this.labelBalanceText.Size = new System.Drawing.Size(446, 13);
+            this.labelBalanceText.TabIndex = 4;
+            this.labelBalanceText.Text = "label2";
             // 
-            // labelTransactionFeeText
+            // tableLayoutPanel10
             // 
-            this.labelTransactionFeeText.AutoSize = true;
-            this.labelTransactionFeeText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTransactionFeeText.Location = new System.Drawing.Point(93, 0);
-            this.labelTransactionFeeText.Name = "labelTransactionFeeText";
-            this.labelTransactionFeeText.Size = new System.Drawing.Size(341, 101);
-            this.labelTransactionFeeText.TabIndex = 2;
-            this.labelTransactionFeeText.Text = "label5";
+            this.tableLayoutPanel10.AutoSize = true;
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel10.Controls.Add(this.buttonReturn, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.labelAccountNumber, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 808);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(510, 29);
+            this.tableLayoutPanel10.TabIndex = 2;
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonReturn.Location = new System.Drawing.Point(432, 3);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(75, 23);
+            this.buttonReturn.TabIndex = 1;
+            this.buttonReturn.Text = "Return";
+            this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // labelAccountNumber
+            // 
+            this.labelAccountNumber.Location = new System.Drawing.Point(3, 0);
+            this.labelAccountNumber.Name = "labelAccountNumber";
+            this.labelAccountNumber.Size = new System.Drawing.Size(342, 23);
+            this.labelAccountNumber.TabIndex = 2;
+            this.labelAccountNumber.Text = "Account Number:";
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.AutoSize = true;
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel8.SetColumnSpan(this.tableLayoutPanel11, 2);
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.buttonCalculate, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.buttonApply, 1, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(431, 82);
+            this.tableLayoutPanel11.TabIndex = 2;
+            // 
+            // buttonCalculate
+            // 
+            this.buttonCalculate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCalculate.Location = new System.Drawing.Point(3, 3);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(209, 23);
+            this.buttonCalculate.TabIndex = 0;
+            this.buttonCalculate.Text = "Calculate Interest";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            // 
+            // buttonApply
+            // 
+            this.buttonApply.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonApply.Location = new System.Drawing.Point(218, 3);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(210, 23);
+            this.buttonApply.TabIndex = 1;
+            this.buttonApply.Text = "Apply Interest";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
+            // 
+            // numericUpDownCurrencyFunds
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.numericUpDownCurrencyFunds, 2);
+            this.numericUpDownCurrencyFunds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCurrencyFunds.Location = new System.Drawing.Point(3, 16);
+            this.numericUpDownCurrencyFunds.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDownCurrencyFunds.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownCurrencyFunds.Name = "numericUpDownCurrencyFunds";
+            this.numericUpDownCurrencyFunds.Size = new System.Drawing.Size(498, 20);
+            this.numericUpDownCurrencyFunds.TabIndex = 1;
             // 
             // UserControlView
             // 
@@ -634,6 +774,10 @@
             this.Size = new System.Drawing.Size(516, 840);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupBoxFunds.ResumeLayout(false);
+            this.groupBoxFunds.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.groupBoxCustomerDetails.ResumeLayout(false);
             this.groupBoxCustomerDetails.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -665,6 +809,8 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrencyFunds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,9 +847,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label labelOverdraftLimit;
         private System.Windows.Forms.Label labelOverdraftPenalty;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Label labelAccountNumber;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelPhoneText;
         private System.Windows.Forms.Label labelCompanyText;
@@ -717,5 +860,17 @@
         private System.Windows.Forms.Label labelInterestRateText;
         private System.Windows.Forms.Label labelOverdraftLimitText;
         private System.Windows.Forms.Label labelOverdraftPenaltyText;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.Label labelAccountNumber;
+        private System.Windows.Forms.GroupBox groupBoxFunds;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label labelFunds;
+        private System.Windows.Forms.Button buttonDeposit;
+        private System.Windows.Forms.Button buttonWithdraw;
+        private CustomControls.NumericUpDownCurrency numericUpDownCurrencyFunds;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.Button buttonApply;
     }
 }

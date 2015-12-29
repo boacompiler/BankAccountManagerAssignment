@@ -18,7 +18,7 @@
     </customerPhone>
     <AcountNumber>2643641</AcountNumber>
     <Type>Fixed Term Account</Type>
-    <AccountBalance>10000000</AccountBalance>
+    <AccountBalance>0</AccountBalance>
     <CompanyName>poop inc</CompanyName>
     <TransactionFee>50</TransactionFee>
   </Account>
@@ -40,7 +40,7 @@
     </customerPhone>
     <AcountNumber>1015958</AcountNumber>
     <Type>Current Account</Type>
-    <AccountBalance>2795</AccountBalance>
+    <AccountBalance>2700</AccountBalance>
     <CompanyName>U.S.A</CompanyName>
     <OverdraftLimit>89</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -63,9 +63,9 @@
     </customerPhone>
     <AcountNumber>2389177</AcountNumber>
     <Type>Savings Account</Type>
-    <AccountBalance>60000</AccountBalance>
+    <AccountBalance>12.2</AccountBalance>
     <CompanyName />
-    <InterestRate>10.22</InterestRate>
+    <InterestRate>0.22</InterestRate>
   </Account>
   <Account xsi:type="FixedTermAccount">
     <customerName>
@@ -150,7 +150,7 @@
     </customerPhone>
     <AcountNumber>1238201</AcountNumber>
     <Type>Current Account</Type>
-    <AccountBalance>8623</AccountBalance>
+    <AccountBalance>8608</AccountBalance>
     <CompanyName />
     <OverdraftLimit>93</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>

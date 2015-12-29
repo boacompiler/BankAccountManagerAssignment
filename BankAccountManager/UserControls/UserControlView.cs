@@ -107,6 +107,9 @@ namespace BankAccountManager.UserControls
                     labelTransactionFeeText.Text = string.Format("{0:C}", fAccount.TransactionFee);
                     break;
             }
+
+            labelFunds.Text = "Current funds: "+ string.Format("{0:C}", account.AccountBalance);
+
             labelAccountNumber.Text = "Account Number: "+account.AcountNumber;
             
         }
@@ -114,6 +117,68 @@ namespace BankAccountManager.UserControls
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             MainForm.ucm.DisplayControl(MainForm.menuControl);
+        }
+
+        private void buttonDeposit_Click(object sender, EventArgs e)
+        {
+            switch (account.Type)
+            {
+                default:
+                case "Current Account":
+                    cAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
+                    break;
+                case "Savings Account":
+                    sAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
+                    break;
+                case "Fixed Term Account":
+                    fAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
+                    break;
+            }
+            refresh();
+            MainForm.myXML.Serialise(MainForm.myList);
+            MainForm.menuControl.FillView();
+        }
+
+        private void buttonWithdraw_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (account.Type)
+                {
+                    default:
+                    case "Current Account":
+                        cAccount.Withdraw((double)numericUpDownCurrencyFunds.Value);
+                        break;
+                    case "Savings Account":
+                        sAccount.Withdraw((double)numericUpDownCurrencyFunds.Value);
+                        break;
+                    case "Fixed Term Account":
+                        fAccount.Withdraw((double)numericUpDownCurrencyFunds.Value);
+                        break;
+                }
+                refresh();
+                MainForm.myXML.Serialise(MainForm.myList);
+                MainForm.menuControl.FillView();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"Error");
+            }
+            
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format("{0:C}", sAccount.CalculateInterest()));
+        }
+
+        private void buttonApply_Click(object sender, EventArgs e)
+        {
+            sAccount.AccountBalance += sAccount.CalculateInterest();
+            refresh();
+            MainForm.myXML.Serialise(MainForm.myList);
+            MainForm.menuControl.FillView();
         }
     }
 }

@@ -131,5 +131,43 @@ namespace BankAccountManager.UserControls
                 MessageBox.Show("Select an account to view", "Error");
             }
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = new DialogResult();
+            Account deleteAccount = new Account();
+
+            try
+            {
+                string accNo = listView1.SelectedItems[0].SubItems[6].Text;
+                listView1.SelectedItems.Clear();
+                deleteAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
+
+                result = MessageBox.Show("Do you want to permanently remove " + deleteAccount.CustomerName.GetFullName() + "'s account?",
+                                                  "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Select an account to delete", "Error");
+            }
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    MainForm.myList.Remove(deleteAccount);
+                    FillView();
+                    MainForm.myXML.Serialise(MainForm.myList);
+                    MainForm.menuControl.FillView();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Cannot delete account", "Error");
+                }
+            }
+            
+        }
     }
 }

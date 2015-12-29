@@ -72,3 +72,4 @@ C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAcc
 C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 F:\repositories\Bank-Account-Manager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlEdit.resources
 C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlAdd.resources
+C:\Users\Robert\documents\visual studio 2015\Projects\BankAccountManager\BankAccountManager\obj\Debug\BankAccountManager.UserControls.UserControlView.resources

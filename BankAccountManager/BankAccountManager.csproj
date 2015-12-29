@@ -97,6 +97,12 @@
     <Compile Include="UserControls\UserControlSearch.Designer.cs">
       <DependentUpon>UserControlSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlView.Designer.cs">
+      <DependentUpon>UserControlView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSearch.resx">
       <DependentUpon>UserControlSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlView.resx">
+      <DependentUpon>UserControlView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

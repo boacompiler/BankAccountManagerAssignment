@@ -26,6 +26,7 @@ namespace BankAccountManager
         public static UserControlMenu menuControl;
         public static UserControlEdit editControl;
         public static UserControlAdd addControl;
+        public static UserControlView viewControl;
 
         public MainForm()
         {
@@ -42,8 +43,7 @@ namespace BankAccountManager
             menuControl = new UserControlMenu();
             editControl = new UserControlEdit();
             addControl = new UserControlAdd();
-
-            
+            viewControl = new UserControlView();
 
             ucm.DisplayControl(menuControl);
         }

@@ -114,5 +114,22 @@ namespace BankAccountManager.UserControls
             MainForm.addControl = new UserControlAdd();//This is just a precaution, we don't want to accidentally addd an existing account
             MainForm.ucm.DisplayControl(MainForm.addControl);
         }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string accNo = listView1.SelectedItems[0].SubItems[6].Text;
+                listView1.SelectedItems.Clear();
+                Account viewAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
+                MainForm.viewControl.setAccount(viewAccount);
+                MainForm.ucm.DisplayControl(MainForm.viewControl);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Select an account to view", "Error");
+            }
+        }
     }
 }

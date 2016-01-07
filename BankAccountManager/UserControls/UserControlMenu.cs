@@ -36,7 +36,7 @@ namespace BankAccountManager.UserControls
 
         public void FillView()
         {
-            listView1.Items.Clear();
+            listViewAccounts.Items.Clear();
 
             
 
@@ -77,9 +77,9 @@ namespace BankAccountManager.UserControls
                         (account.customerPhone != null)? account.customerPhone.Number : null, 
                         (account.CompanyName != null)? account.CompanyName : null,
                         account.AcountNumber.ToString()
-                    });//TODO finish
+                    });
 
-                    listView1.Items.Add(item);
+                    listViewAccounts.Items.Add(item);
                 }
                 
             }
@@ -94,8 +94,8 @@ namespace BankAccountManager.UserControls
         {
             try
             {
-                string accNo = listView1.SelectedItems[0].SubItems[6].Text;
-                listView1.SelectedItems.Clear();
+                string accNo = listViewAccounts.SelectedItems[0].SubItems[6].Text;
+                listViewAccounts.SelectedItems.Clear();
                 Account editAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
                 MainForm.editControl = new UserControlEdit(); //This is just a precaution, we don't want to accidentally edit the wrong account, so we reinitialise the control 
                 MainForm.editControl.setAccount(editAccount);
@@ -119,8 +119,8 @@ namespace BankAccountManager.UserControls
         {
             try
             {
-                string accNo = listView1.SelectedItems[0].SubItems[6].Text;
-                listView1.SelectedItems.Clear();
+                string accNo = listViewAccounts.SelectedItems[0].SubItems[6].Text;
+                listViewAccounts.SelectedItems.Clear();
                 Account viewAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
                 MainForm.viewControl.setAccount(viewAccount);
                 MainForm.ucm.DisplayControl(MainForm.viewControl);
@@ -139,8 +139,8 @@ namespace BankAccountManager.UserControls
 
             try
             {
-                string accNo = listView1.SelectedItems[0].SubItems[6].Text;
-                listView1.SelectedItems.Clear();
+                string accNo = listViewAccounts.SelectedItems[0].SubItems[6].Text;
+                listViewAccounts.SelectedItems.Clear();
                 deleteAccount = MainForm.myList.Find(x => x.AcountNumber == Int32.Parse(accNo));
 
                 result = MessageBox.Show("Do you want to permanently remove " + deleteAccount.CustomerName.GetFullName() + "'s account?",
@@ -168,6 +168,12 @@ namespace BankAccountManager.UserControls
                 }
             }
             
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxSearch.Text = "";
+            buttonSearch.PerformClick();
         }
     }
 }

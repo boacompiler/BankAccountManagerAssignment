@@ -14,6 +14,7 @@ namespace BankAccountManager.Classes
         private XmlSerializer serializerObj;
         private T serialisedClass; //this class must comply to serialiser specifications, but can be any type
 
+        //Getters and Setters
         public string Path
         {
             get
@@ -38,6 +39,7 @@ namespace BankAccountManager.Classes
 
 
         //TODO i used the uk speling of serilise which does not mesh with the constant american spellings found in the libraries, i may have to change this
+        //Constructor
         public XMLSeriliser(T serialisedClass)
         {
             serializerObj = new XmlSerializer(serialisedClass.GetType());
@@ -55,13 +57,21 @@ namespace BankAccountManager.Classes
             WriteFileStream.Close();
         }
 
-        //Deserilises the xml file to the passed class, this class must be the same type as the soriginal class
-        public T Deserialise(T serialisedClass)
+        //Deserialises the xml file to the passed class, this class must be the same type as the original class
+        public T Deserialise(T deserialisedClass)
         {
-            FileStream ReadFileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-            serialisedClass = (T)SerializerObj.Deserialize(ReadFileStream);
-            ReadFileStream.Close();
-            return serialisedClass;
+            try
+            {
+                FileStream ReadFileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+                deserialisedClass = (T)SerializerObj.Deserialize(ReadFileStream);
+                ReadFileStream.Close();
+                return deserialisedClass;
+            }
+            catch (Exception)
+            {
+                return deserialisedClass;
+            }
+
         }
 
     }

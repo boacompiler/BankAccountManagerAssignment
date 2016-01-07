@@ -57,8 +57,7 @@ namespace BankAccountManager.UserControls
         public void setAccount(Account editAccount)
         {
             
-            //this.accountNumber = AccountNumber;
-            account = editAccount; //TODO testing
+            account = editAccount; 
 
             switch (account.Type)
             {
@@ -121,22 +120,30 @@ namespace BankAccountManager.UserControls
 
         private void buttonDeposit_Click(object sender, EventArgs e)
         {
-            switch (account.Type)
+            try
             {
-                default:
-                case "Current Account":
-                    cAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
-                    break;
-                case "Savings Account":
-                    sAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
-                    break;
-                case "Fixed Term Account":
-                    fAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
-                    break;
+                switch (account.Type)
+                {
+                    default:
+                    case "Current Account":
+                        cAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
+                        break;
+                    case "Savings Account":
+                        sAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
+                        break;
+                    case "Fixed Term Account":
+                        fAccount.Deposit((double)numericUpDownCurrencyFunds.Value);
+                        break;
+                }
+                refresh();
+                MainForm.myXML.Serialise(MainForm.myList);
+                MainForm.menuControl.FillView();
             }
-            refresh();
-            MainForm.myXML.Serialise(MainForm.myList);
-            MainForm.menuControl.FillView();
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void buttonWithdraw_Click(object sender, EventArgs e)

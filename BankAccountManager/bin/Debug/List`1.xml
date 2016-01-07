@@ -17,7 +17,6 @@
       <Number>01483579982</Number>
     </customerPhone>
     <AcountNumber>2643641</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>0</AccountBalance>
     <CompanyName>poop inc</CompanyName>
     <TransactionFee>50</TransactionFee>
@@ -39,11 +38,10 @@
       <Number>1776</Number>
     </customerPhone>
     <AcountNumber>1015958</AcountNumber>
-    <Type>Current Account</Type>
-    <AccountBalance>2700</AccountBalance>
+    <AccountBalance>50</AccountBalance>
     <CompanyName>U.S.A</CompanyName>
-    <OverdraftLimit>89</OverdraftLimit>
-    <OverdraftPenalty>5</OverdraftPenalty>
+    <OverdraftLimit>10</OverdraftLimit>
+    <OverdraftPenalty>10</OverdraftPenalty>
   </Account>
   <Account xsi:type="SavingsAccount">
     <customerName>
@@ -62,7 +60,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>2389177</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>12.2</AccountBalance>
     <CompanyName />
     <InterestRate>0.22</InterestRate>
@@ -84,7 +81,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8875008</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Grayce inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -106,7 +102,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>909382</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Melonie inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -128,7 +123,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>4634868</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>7728</AccountBalance>
     <InterestRate>0.56205503198413875</InterestRate>
   </Account>
@@ -149,7 +143,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>1238201</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>8608</AccountBalance>
     <CompanyName />
     <OverdraftLimit>93</OverdraftLimit>
@@ -172,7 +165,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>2060798</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Gertude inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -194,7 +186,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>5203066</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>2656</AccountBalance>
     <InterestRate>0.2595273655185138</InterestRate>
   </Account>
@@ -215,7 +206,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>814362</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>4851</AccountBalance>
     <OverdraftLimit>62</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -237,7 +227,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>1581491</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>3296</AccountBalance>
     <InterestRate>0.49169679767996854</InterestRate>
   </Account>
@@ -258,7 +247,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>656576</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Marilee inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -280,7 +268,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>353729</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>2102</AccountBalance>
     <InterestRate>0.59474252522678239</InterestRate>
   </Account>
@@ -301,7 +288,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>9803639</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Jammie inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -323,7 +309,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>3322443</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Evita inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -345,7 +330,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>7450561</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>4267</AccountBalance>
     <OverdraftLimit>92</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -367,7 +351,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>9462277</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>488</AccountBalance>
     <InterestRate>0.34575622987270183</InterestRate>
   </Account>
@@ -388,8 +371,7 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8174763</AcountNumber>
-    <Type>Current Account</Type>
-    <AccountBalance>2188</AccountBalance>
+    <AccountBalance>2238</AccountBalance>
     <OverdraftLimit>60</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
   </Account>
@@ -410,7 +392,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>9739251</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Terica inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -432,7 +413,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>6055293</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>8641</AccountBalance>
     <InterestRate>0.18317423797360355</InterestRate>
   </Account>
@@ -453,7 +433,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>7296380</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>6398</AccountBalance>
     <OverdraftLimit>72</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -475,7 +454,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8996768</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>9874</AccountBalance>
     <InterestRate>0.46248835994046578</InterestRate>
   </Account>
@@ -496,7 +474,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>5147680</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>7580</AccountBalance>
     <OverdraftLimit>91</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -518,7 +495,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>5761968</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>2144</AccountBalance>
     <OverdraftLimit>75</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -540,7 +516,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>4285363</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>9291</AccountBalance>
     <OverdraftLimit>68</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -562,7 +537,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>7054786</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Denae inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -584,7 +558,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>3684660</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Jessica inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -606,7 +579,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>5278389</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>6327</AccountBalance>
     <InterestRate>0.17432992699292021</InterestRate>
   </Account>
@@ -627,7 +599,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>2674937</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>8588</AccountBalance>
     <InterestRate>0.39811276788735428</InterestRate>
   </Account>
@@ -648,7 +619,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>743252</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>7339</AccountBalance>
     <InterestRate>0.14083237421737629</InterestRate>
   </Account>
@@ -669,7 +639,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8220552</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>7323</AccountBalance>
     <OverdraftLimit>99</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -691,7 +660,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8898508</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Gertude inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -713,7 +681,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>920722</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Elinore inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -735,7 +702,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>6494292</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>7218</AccountBalance>
     <OverdraftLimit>78</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -757,7 +723,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>2689465</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>5524</AccountBalance>
     <InterestRate>0.75560341833885925</InterestRate>
   </Account>
@@ -778,7 +743,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8983126</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>6035</AccountBalance>
     <CompanyName />
     <InterestRate>0.730195421180779</InterestRate>
@@ -800,7 +764,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>1797866</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Madeline inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -822,7 +785,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8207460</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>2909</AccountBalance>
     <InterestRate>0.24673769052454164</InterestRate>
   </Account>
@@ -843,7 +805,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8818121</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>3534</AccountBalance>
     <CompanyName />
     <OverdraftLimit>95</OverdraftLimit>
@@ -866,7 +827,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8275543</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Evita inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -888,7 +848,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8108452</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Romona inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -910,7 +869,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>999500</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>1945</AccountBalance>
     <InterestRate>0.7446140987075</InterestRate>
   </Account>
@@ -931,7 +889,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>3477729</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Elinore inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -953,7 +910,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>5466787</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Mikki inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -975,7 +931,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>3382958</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Terra inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -997,7 +952,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>9160623</AcountNumber>
-    <Type>Fixed Term Account</Type>
     <AccountBalance>10000000</AccountBalance>
     <CompanyName>Jessica inc</CompanyName>
     <TransactionFee>0</TransactionFee>
@@ -1019,7 +973,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8774742</AcountNumber>
-    <Type>Savings Account</Type>
     <AccountBalance>2354</AccountBalance>
     <InterestRate>0.52881808785200968</InterestRate>
   </Account>
@@ -1040,7 +993,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>9276055</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>8821</AccountBalance>
     <OverdraftLimit>53</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -1062,7 +1014,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>6723992</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>7107</AccountBalance>
     <OverdraftLimit>52</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
@@ -1084,7 +1035,6 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>1370093</AcountNumber>
-    <Type>Current Account</Type>
     <AccountBalance>2396</AccountBalance>
     <OverdraftLimit>69</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>

@@ -30,7 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewAccounts = new System.Windows.Forms.ListView();
             this.columnHeaderCustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAccountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAccountBalance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,6 +40,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxAccountCriteria = new System.Windows.Forms.ComboBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.groupBoxOptions = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -69,14 +70,16 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.listView1, 0, 1);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.Controls.Add(this.listViewAccounts, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.textBoxSearch, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonSearch, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.comboBoxAccountCriteria, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonClear, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(103, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -86,25 +89,25 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(524, 431);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // listView1
+            // listViewAccounts
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewAccounts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCustomerName,
             this.columnHeaderAccountType,
             this.columnHeaderAccountBalance,
             this.columnHeaderAddress,
             this.columnHeaderPhoneNumber,
             this.columnHeaderCompanyName});
-            this.tableLayoutPanel3.SetColumnSpan(this.listView1, 3);
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(3, 32);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(518, 396);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.tableLayoutPanel3.SetColumnSpan(this.listViewAccounts, 4);
+            this.listViewAccounts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewAccounts.FullRowSelect = true;
+            this.listViewAccounts.Location = new System.Drawing.Point(3, 32);
+            this.listViewAccounts.MultiSelect = false;
+            this.listViewAccounts.Name = "listViewAccounts";
+            this.listViewAccounts.Size = new System.Drawing.Size(518, 396);
+            this.listViewAccounts.TabIndex = 0;
+            this.listViewAccounts.UseCompatibleStateImageBehavior = false;
+            this.listViewAccounts.View = System.Windows.Forms.View.Details;
             // 
             // columnHeaderCustomerName
             // 
@@ -140,12 +143,12 @@
             this.textBoxSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxSearch.Location = new System.Drawing.Point(3, 3);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(310, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(229, 20);
             this.textBoxSearch.TabIndex = 1;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(446, 3);
+            this.buttonSearch.Location = new System.Drawing.Point(365, 3);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
             this.buttonSearch.TabIndex = 2;
@@ -157,10 +160,20 @@
             // 
             this.comboBoxAccountCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAccountCriteria.FormattingEnabled = true;
-            this.comboBoxAccountCriteria.Location = new System.Drawing.Point(319, 3);
+            this.comboBoxAccountCriteria.Location = new System.Drawing.Point(238, 3);
             this.comboBoxAccountCriteria.Name = "comboBoxAccountCriteria";
             this.comboBoxAccountCriteria.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAccountCriteria.TabIndex = 3;
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(446, 3);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 4;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // groupBoxOptions
             // 
@@ -255,7 +268,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewAccounts;
         private System.Windows.Forms.ColumnHeader columnHeaderCustomerName;
         private System.Windows.Forms.ColumnHeader columnHeaderAccountType;
         private System.Windows.Forms.ColumnHeader columnHeaderAccountBalance;
@@ -271,5 +284,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderPhoneNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderCompanyName;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

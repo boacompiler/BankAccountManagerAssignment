@@ -36,7 +36,7 @@ namespace BankAccountManager
             myList = new List<Account>();
             myXML = new XMLSeriliser<List<Account>>(myList);
 
-            myList = myXML.Deserialise(myList);//TODO remove, this is for testing, or is it?
+            myList = myXML.Deserialise(myList);
 
             testControl = new TestControl();
             searchControl = new UserControlSearch();

@@ -6,7 +6,7 @@
 
         public FixedTermAccount()
         {
-            this.Type = "Fixed Term Account";
+            this.type = "Fixed Term Account";
         }
 
         public void SetInitialBalance(double initialBalance, double initialTransactionFee) 

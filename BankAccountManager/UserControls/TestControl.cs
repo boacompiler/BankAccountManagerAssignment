@@ -19,7 +19,7 @@ namespace BankAccountManager.UserControls
         Account myTestAcc;
         SavingsAccount myNamelessAccount;
         List<Account> myList;
-        XMLSeriliser<List<Account>> myXML;
+        XMLSerialiser<List<Account>> myXML;
 
         
 
@@ -34,7 +34,7 @@ namespace BankAccountManager.UserControls
 
             myList = new List<Account>();
             myList.Add(myAcc);
-            myXML = new XMLSeriliser<List<Account>>(myList);
+            myXML = new XMLSerialiser<List<Account>>(myList);
             //myAcc = new SavingsAccount();
             //myAcc.SetInitialBalance(100,0.2);
             //myCAcc = new CurrentAccount();
@@ -185,8 +185,8 @@ namespace BankAccountManager.UserControls
                 }
             }
             //MainForm.myXML.Serialise();
-            XMLSeriliser<List<Account>> myaXML;
-            myaXML = new XMLSeriliser<List<Account>>(MainForm.myList);
+            XMLSerialiser<List<Account>> myaXML;
+            myaXML = new XMLSerialiser<List<Account>>(MainForm.myList);
             myaXML.Serialise(MainForm.myList);
             MessageBox.Show("done " + MainForm.myList[0].customerName.GetFullName());
         }

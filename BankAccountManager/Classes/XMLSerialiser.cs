@@ -7,7 +7,7 @@ namespace BankAccountManager.Classes
     //An implementation of the c# xml seriliser that takes generics, allowing this classes reuse in future projects
     //objects to be serilised must have parameterless constructors 
 
-    public class XMLSeriliser<T>
+    public class XMLSerialiser<T>
     {
         
         private string path;
@@ -40,7 +40,7 @@ namespace BankAccountManager.Classes
 
         //TODO i used the uk speling of serilise which does not mesh with the constant american spellings found in the libraries, i may have to change this
         //Constructor
-        public XMLSeriliser(T serialisedClass)
+        public XMLSerialiser(T serialisedClass)
         {
             serializerObj = new XmlSerializer(serialisedClass.GetType());
             this.serialisedClass = serialisedClass;

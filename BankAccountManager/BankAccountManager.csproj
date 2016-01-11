@@ -84,7 +84,7 @@
       <DependentUpon>UserControlEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlManager.cs" />
-    <Compile Include="Classes\XMLSeriliser.cs" />
+    <Compile Include="Classes\XMLSerialiser.cs" />
     <Compile Include="UserControls\UserControlMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>

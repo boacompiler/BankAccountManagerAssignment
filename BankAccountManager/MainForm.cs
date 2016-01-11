@@ -19,7 +19,7 @@ namespace BankAccountManager
         public static UserControlManager ucm;
 
         public static List<Account> myList;
-        public static XMLSeriliser<List<Account>> myXML;
+        public static XMLSerialiser<List<Account>> myXML;
 
         public static TestControl testControl;
         public static UserControlSearch searchControl;
@@ -34,7 +34,7 @@ namespace BankAccountManager
             ucm = new UserControlManager(this);
 
             myList = new List<Account>();
-            myXML = new XMLSeriliser<List<Account>>(myList);
+            myXML = new XMLSerialiser<List<Account>>(myList);
 
             myList = myXML.Deserialise(myList);
 

@@ -28,11 +28,17 @@
             }
         }
 
-        //TODO i don't understand the specifications for this method
-        //public bool IsFeeCharged()
-        //{
+        public bool IsFeeCharged(int nTransaction)
+        {
+            bool charge = false;
 
-        //}
+            if (nTransaction > 5)
+            {
+                charge = true;
+            }
+
+            return charge;
+        }
 
     }
 }

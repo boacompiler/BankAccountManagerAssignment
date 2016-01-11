@@ -14,13 +14,13 @@ namespace BankAccountManager.UserControls
     public partial class UserControlSearch : UserControl
     {
         List<Account> myList;
-        XMLSeriliser<List<Account>> myXML;
+        XMLSerialiser<List<Account>> myXML;
 
         public UserControlSearch()
         {
             InitializeComponent();
             myList = new List<Account>();
-            myXML = new XMLSeriliser<List<Account>>(myList);
+            myXML = new XMLSerialiser<List<Account>>(myList);
             myList = myXML.Deserialise(myList);
 
             List<string> nameList = myList.Select(C =>

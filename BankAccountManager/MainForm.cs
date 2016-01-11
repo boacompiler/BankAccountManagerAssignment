@@ -21,8 +21,6 @@ namespace BankAccountManager
         public static List<Account> myList;
         public static XMLSerialiser<List<Account>> myXML;
 
-        public static TestControl testControl;
-        public static UserControlSearch searchControl;
         public static UserControlMenu menuControl;
         public static UserControlEdit editControl;
         public static UserControlAdd addControl;
@@ -38,8 +36,6 @@ namespace BankAccountManager
 
             myList = myXML.Deserialise(myList);
 
-            testControl = new TestControl();
-            searchControl = new UserControlSearch();
             menuControl = new UserControlMenu();
             editControl = new UserControlEdit();
             addControl = new UserControlAdd();

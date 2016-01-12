@@ -16,7 +16,6 @@ namespace BankAccountManager.UserControls
     {
 
         private int accountNumber;
-        //TODO Interest rate currrenty currency up down, shouldn't be
 
         private CurrentAccount cAccount;
         private SavingsAccount sAccount;
@@ -26,7 +25,7 @@ namespace BankAccountManager.UserControls
         {
             InitializeComponent();
             comboBoxHonorific.DataSource = Enum.GetNames(typeof(Honorific));
-            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};//TODO sort this out
+            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};
 
             cAccount = new CurrentAccount();
             sAccount = new SavingsAccount();

@@ -23,7 +23,7 @@ namespace BankAccountManager.UserControls
         public UserControlView()
         {
             InitializeComponent();
-            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};//TODO sort this out
+            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};
             
             
         }

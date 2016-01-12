@@ -28,6 +28,7 @@
             }
         }
 
+        //Calculates if fee is charged upon subsequent transactions.
         public bool IsFeeCharged(int nTransaction)
         {
             bool charge = false;

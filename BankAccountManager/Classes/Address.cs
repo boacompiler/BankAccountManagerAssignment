@@ -93,7 +93,6 @@
             }
         }
 
-        //TODO add validation
         public void SetFullAddress(string building, string road, string town, string county, string postalCode)
         {
             Building = building;

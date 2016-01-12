@@ -24,7 +24,7 @@ namespace BankAccountManager.UserControls
         {
             InitializeComponent();
             comboBoxHonorific.DataSource = Enum.GetNames(typeof(Honorific));
-            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};//TODO sort this out
+            comboBoxType.DataSource = new string[] {"Current Account","Savings Account","Fixed Term Account"};
             
             
         }
@@ -57,9 +57,7 @@ namespace BankAccountManager.UserControls
 
         public void setAccount(Account editAccount)
         {
-            
-            //this.accountNumber = AccountNumber;
-            account = editAccount; //TODO testing
+            account = editAccount; 
 
             switch (account.Type)
             {
@@ -76,8 +74,6 @@ namespace BankAccountManager.UserControls
             }
 
             refresh();
-
-            //sAccount = (SavingsAccount)MainForm.myList[AccountNumber]; //TODO THIS IS THE FIX WE NEEDED SHINY AND CHROME
             
         }
 

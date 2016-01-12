@@ -37,8 +37,6 @@ namespace BankAccountManager.Classes
             // no set object, this would upset the seriliser, create a new instance of this class to serilise a different object
         }
 
-
-        //TODO i used the uk speling of serilise which does not mesh with the constant american spellings found in the libraries, i may have to change this
         //Constructor
         public XMLSerialiser(T serialisedClass)
         {

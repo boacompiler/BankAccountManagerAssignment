@@ -14,11 +14,11 @@
       <PostalCode>GU2</PostalCode>
     </customerAddress>
     <customerPhone>
-      <Number>01483579982</Number>
+      <Number>01483579872</Number>
     </customerPhone>
     <AcountNumber>2643641</AcountNumber>
     <AccountBalance>0</AccountBalance>
-    <CompanyName>poop inc</CompanyName>
+    <CompanyName>local inc</CompanyName>
     <TransactionFee>50</TransactionFee>
   </Account>
   <Account xsi:type="CurrentAccount">
@@ -51,9 +51,9 @@
     </customerName>
     <customerAddress>
       <Building>61</Building>
-      <Road>Bogan Road</Road>
+      <Road>Salesian Road</Road>
       <Town>Hadley</Town>
-      <County>Hampshirw</County>
+      <County>Hampshire</County>
       <PostalCode>GU3 7DC</PostalCode>
     </customerAddress>
     <customerPhone>
@@ -81,7 +81,7 @@
       <Number>12345678910</Number>
     </customerPhone>
     <AcountNumber>8875008</AcountNumber>
-    <AccountBalance>10000000</AccountBalance>
+    <AccountBalance>10000010</AccountBalance>
     <CompanyName>Grayce inc</CompanyName>
     <TransactionFee>0</TransactionFee>
   </Account>
@@ -1038,5 +1038,27 @@
     <AccountBalance>2396</AccountBalance>
     <OverdraftLimit>69</OverdraftLimit>
     <OverdraftPenalty>5</OverdraftPenalty>
+  </Account>
+  <Account xsi:type="CurrentAccount">
+    <customerName>
+      <honorific>Mr</honorific>
+      <FirstName>Mickey</FirstName>
+      <SecondName>Mouse</SecondName>
+    </customerName>
+    <customerAddress>
+      <Building>25</Building>
+      <Road>Mouse Lane</Road>
+      <Town>Toon Town</Town>
+      <County>Surrey</County>
+      <PostalCode>Mic keY</PostalCode>
+    </customerAddress>
+    <customerPhone>
+      <Number>07700900695</Number>
+    </customerPhone>
+    <AcountNumber>512068760</AcountNumber>
+    <AccountBalance>5000</AccountBalance>
+    <CompanyName>Disney</CompanyName>
+    <OverdraftLimit>30</OverdraftLimit>
+    <OverdraftPenalty>10</OverdraftPenalty>
   </Account>
 </ArrayOfAccount>
